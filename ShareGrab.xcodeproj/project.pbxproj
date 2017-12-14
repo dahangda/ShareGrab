@@ -8,24 +8,69 @@
 
 /* Begin PBXBuildFile section */
 		E32B0FF41FE2119600A98135 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E32B0FF31FE2119600A98135 /* AppDelegate.m */; };
-		E32B0FF71FE2119600A98135 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E32B0FF61FE2119600A98135 /* ViewController.m */; };
-		E32B0FFA1FE2119600A98135 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E32B0FF81FE2119600A98135 /* Main.storyboard */; };
-		E32B0FFC1FE2119600A98135 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E32B0FFB1FE2119600A98135 /* Assets.xcassets */; };
 		E32B0FFF1FE2119600A98135 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E32B0FFD1FE2119600A98135 /* LaunchScreen.storyboard */; };
 		E32B10021FE2119600A98135 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E32B10011FE2119600A98135 /* main.m */; };
+		E32B10161FE2169900A98135 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = E32B10151FE2169900A98135 /* Podfile */; };
+		E32B10191FE2177400A98135 /* BaseUINavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E32B10181FE2177400A98135 /* BaseUINavigationController.m */; };
+		E32B101E1FE217DD00A98135 /* YHAnimatedTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = E32B101D1FE217DD00A98135 /* YHAnimatedTransition.m */; };
+		E32B10261FE2180100A98135 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = E32B10221FE2180100A98135 /* NSString+Base64.m */; };
+		E32B10271FE2180100A98135 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = E32B10251FE2180100A98135 /* UIView+Frame.m */; };
+		E32B10341FE21A5800A98135 /* YHTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E32B102F1FE21A5700A98135 /* YHTabBarViewController.m */; };
+		E32B10351FE21A5800A98135 /* YHTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E32B10301FE21A5700A98135 /* YHTabBarItem.m */; };
+		E32B10361FE21A5800A98135 /* YHTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E32B10311FE21A5700A98135 /* YHTabBar.m */; };
+		E32B103F1FE21CC500A98135 /* AppDelegate+AppSever.m in Sources */ = {isa = PBXBuildFile; fileRef = E32B103E1FE21CC500A98135 /* AppDelegate+AppSever.m */; };
+		E32B10421FE2278E00A98135 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E32B10401FE2278E00A98135 /* BaseViewController.m */; };
+		E32B10581FE248D400A98135 /* DHFindHouserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E32B10571FE248D400A98135 /* DHFindHouserViewController.m */; };
+		E32B105B1FE248FE00A98135 /* DHMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E32B105A1FE248FE00A98135 /* DHMessageViewController.m */; };
+		E32B105E1FE2491D00A98135 /* DHMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E32B105D1FE2491D00A98135 /* DHMineViewController.m */; };
+		E32B10611FE249FE00A98135 /* DHHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E32B10601FE249FE00A98135 /* DHHomeViewController.m */; };
+		E32B10631FE26FEF00A98135 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E32B10621FE26FEF00A98135 /* Assets.xcassets */; };
+		E6DB59EED86B596D8580B150 /* libPods-ShareGrab.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A7754D3D97B201DC52AC384 /* libPods-ShareGrab.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		53F0CC9FF31889998279D401 /* Pods-ShareGrab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareGrab.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShareGrab/Pods-ShareGrab.debug.xcconfig"; sourceTree = "<group>"; };
+		7A7754D3D97B201DC52AC384 /* libPods-ShareGrab.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShareGrab.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B616CC0EBCF50E523547EB7 /* Pods-ShareGrab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareGrab.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShareGrab/Pods-ShareGrab.release.xcconfig"; sourceTree = "<group>"; };
 		E32B0FEF1FE2119600A98135 /* ShareGrab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareGrab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E32B0FF21FE2119600A98135 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E32B0FF31FE2119600A98135 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E32B0FF51FE2119600A98135 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E32B0FF61FE2119600A98135 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		E32B0FF91FE2119600A98135 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E32B0FFB1FE2119600A98135 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E32B0FFE1FE2119600A98135 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E32B10001FE2119600A98135 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E32B10011FE2119600A98135 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E32B10141FE2151D00A98135 /* PrefixHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.h; sourceTree = "<group>"; };
+		E32B10151FE2169900A98135 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E32B10171FE2177400A98135 /* BaseUINavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseUINavigationController.h; sourceTree = "<group>"; };
+		E32B10181FE2177400A98135 /* BaseUINavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseUINavigationController.m; sourceTree = "<group>"; };
+		E32B101B1FE217DC00A98135 /* YHTransitonProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHTransitonProtocol.h; sourceTree = "<group>"; };
+		E32B101C1FE217DC00A98135 /* YHAnimatedTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHAnimatedTransition.h; sourceTree = "<group>"; };
+		E32B101D1FE217DD00A98135 /* YHAnimatedTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHAnimatedTransition.m; sourceTree = "<group>"; };
+		E32B10211FE2180100A98135 /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
+		E32B10221FE2180100A98135 /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
+		E32B10241FE2180100A98135 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		E32B10251FE2180100A98135 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		E32B10281FE2187C00A98135 /* URLMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLMacro.h; sourceTree = "<group>"; };
+		E32B10291FE2187C00A98135 /* YHMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHMacro.h; sourceTree = "<group>"; };
+		E32B102A1FE2187D00A98135 /* ThirdMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdMacro.h; sourceTree = "<group>"; };
+		E32B102E1FE21A5700A98135 /* YHTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHTabBar.h; sourceTree = "<group>"; };
+		E32B102F1FE21A5700A98135 /* YHTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHTabBarViewController.m; sourceTree = "<group>"; };
+		E32B10301FE21A5700A98135 /* YHTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHTabBarItem.m; sourceTree = "<group>"; };
+		E32B10311FE21A5700A98135 /* YHTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHTabBar.m; sourceTree = "<group>"; };
+		E32B10321FE21A5700A98135 /* YHTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHTabBarItem.h; sourceTree = "<group>"; };
+		E32B10331FE21A5800A98135 /* YHTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHTabBarViewController.h; sourceTree = "<group>"; };
+		E32B103D1FE21CC500A98135 /* AppDelegate+AppSever.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+AppSever.h"; sourceTree = "<group>"; };
+		E32B103E1FE21CC500A98135 /* AppDelegate+AppSever.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+AppSever.m"; sourceTree = "<group>"; };
+		E32B10401FE2278E00A98135 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		E32B10411FE2278E00A98135 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		E32B10561FE248D400A98135 /* DHFindHouserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHFindHouserViewController.h; sourceTree = "<group>"; };
+		E32B10571FE248D400A98135 /* DHFindHouserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHFindHouserViewController.m; sourceTree = "<group>"; };
+		E32B10591FE248FE00A98135 /* DHMessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHMessageViewController.h; sourceTree = "<group>"; };
+		E32B105A1FE248FE00A98135 /* DHMessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHMessageViewController.m; sourceTree = "<group>"; };
+		E32B105C1FE2491D00A98135 /* DHMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHMineViewController.h; sourceTree = "<group>"; };
+		E32B105D1FE2491D00A98135 /* DHMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHMineViewController.m; sourceTree = "<group>"; };
+		E32B105F1FE249FE00A98135 /* DHHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHHomeViewController.h; sourceTree = "<group>"; };
+		E32B10601FE249FE00A98135 /* DHHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHHomeViewController.m; sourceTree = "<group>"; };
+		E32B10621FE26FEF00A98135 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6DB59EED86B596D8580B150 /* libPods-ShareGrab.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,7 +89,10 @@
 			isa = PBXGroup;
 			children = (
 				E32B0FF11FE2119600A98135 /* ShareGrab */,
+				E32B10151FE2169900A98135 /* Podfile */,
 				E32B0FF01FE2119600A98135 /* Products */,
+				FB99573F7394A7C8B84C602A /* Pods */,
+				E488F6356803590B14296A8D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,17 +107,302 @@
 		E32B0FF11FE2119600A98135 /* ShareGrab */ = {
 			isa = PBXGroup;
 			children = (
-				E32B0FF21FE2119600A98135 /* AppDelegate.h */,
-				E32B0FF31FE2119600A98135 /* AppDelegate.m */,
-				E32B0FF51FE2119600A98135 /* ViewController.h */,
-				E32B0FF61FE2119600A98135 /* ViewController.m */,
-				E32B0FF81FE2119600A98135 /* Main.storyboard */,
-				E32B0FFB1FE2119600A98135 /* Assets.xcassets */,
-				E32B0FFD1FE2119600A98135 /* LaunchScreen.storyboard */,
-				E32B10001FE2119600A98135 /* Info.plist */,
-				E32B10011FE2119600A98135 /* main.m */,
+				E32B10081FE211F100A98135 /* AppDelegate */,
+				E32B100C1FE2132300A98135 /* Modules */,
+				E32B10101FE213F700A98135 /* Utils */,
+				E32B101A1FE217B500A98135 /* BaseAnimateTransion */,
+				E32B10091FE2121900A98135 /* BaseModelController */,
+				E32B100F1FE213CB00A98135 /* UserManager */,
+				E32B10111FE2140900A98135 /* Macro */,
+				E32B100E1FE213A900A98135 /* Supporting File */,
 			);
 			path = ShareGrab;
+			sourceTree = "<group>";
+		};
+		E32B10081FE211F100A98135 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				E32B0FF21FE2119600A98135 /* AppDelegate.h */,
+				E32B0FF31FE2119600A98135 /* AppDelegate.m */,
+				E32B103D1FE21CC500A98135 /* AppDelegate+AppSever.h */,
+				E32B103E1FE21CC500A98135 /* AppDelegate+AppSever.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		E32B10091FE2121900A98135 /* BaseModelController */ = {
+			isa = PBXGroup;
+			children = (
+				E32B100B1FE2129800A98135 /* BaseViewController */,
+				E32B100A1FE2127100A98135 /* BaseNavigationController */,
+			);
+			path = BaseModelController;
+			sourceTree = "<group>";
+		};
+		E32B100A1FE2127100A98135 /* BaseNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				E32B10171FE2177400A98135 /* BaseUINavigationController.h */,
+				E32B10181FE2177400A98135 /* BaseUINavigationController.m */,
+			);
+			path = BaseNavigationController;
+			sourceTree = "<group>";
+		};
+		E32B100B1FE2129800A98135 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E32B10411FE2278E00A98135 /* BaseViewController.h */,
+				E32B10401FE2278E00A98135 /* BaseViewController.m */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		E32B100C1FE2132300A98135 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				E32B100D1FE2133D00A98135 /* main */,
+				E32B10461FE2435100A98135 /* FindHouse */,
+				E32B10451FE2430E00A98135 /* Message */,
+				E32B10441FE242DF00A98135 /* Mine */,
+				E32B10431FE242C400A98135 /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		E32B100D1FE2133D00A98135 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				E32B102E1FE21A5700A98135 /* YHTabBar.h */,
+				E32B10311FE21A5700A98135 /* YHTabBar.m */,
+				E32B10321FE21A5700A98135 /* YHTabBarItem.h */,
+				E32B10301FE21A5700A98135 /* YHTabBarItem.m */,
+				E32B10331FE21A5800A98135 /* YHTabBarViewController.h */,
+				E32B102F1FE21A5700A98135 /* YHTabBarViewController.m */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		E32B100E1FE213A900A98135 /* Supporting File */ = {
+			isa = PBXGroup;
+			children = (
+				E32B10621FE26FEF00A98135 /* Assets.xcassets */,
+				E32B10011FE2119600A98135 /* main.m */,
+				E32B10001FE2119600A98135 /* Info.plist */,
+				E32B0FFD1FE2119600A98135 /* LaunchScreen.storyboard */,
+				E32B10141FE2151D00A98135 /* PrefixHeader.h */,
+			);
+			path = "Supporting File";
+			sourceTree = "<group>";
+		};
+		E32B100F1FE213CB00A98135 /* UserManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserManager;
+			sourceTree = "<group>";
+		};
+		E32B10101FE213F700A98135 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E32B101F1FE2180100A98135 /* Category */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E32B10111FE2140900A98135 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				E32B102A1FE2187D00A98135 /* ThirdMacro.h */,
+				E32B10281FE2187C00A98135 /* URLMacro.h */,
+				E32B10291FE2187C00A98135 /* YHMacro.h */,
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
+		E32B101A1FE217B500A98135 /* BaseAnimateTransion */ = {
+			isa = PBXGroup;
+			children = (
+				E32B101C1FE217DC00A98135 /* YHAnimatedTransition.h */,
+				E32B101D1FE217DD00A98135 /* YHAnimatedTransition.m */,
+				E32B101B1FE217DC00A98135 /* YHTransitonProtocol.h */,
+			);
+			path = BaseAnimateTransion;
+			sourceTree = "<group>";
+		};
+		E32B101F1FE2180100A98135 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				E32B10201FE2180100A98135 /* NSString */,
+				E32B10231FE2180100A98135 /* UIView */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		E32B10201FE2180100A98135 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				E32B10211FE2180100A98135 /* NSString+Base64.h */,
+				E32B10221FE2180100A98135 /* NSString+Base64.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		E32B10231FE2180100A98135 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				E32B10241FE2180100A98135 /* UIView+Frame.h */,
+				E32B10251FE2180100A98135 /* UIView+Frame.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		E32B10431FE242C400A98135 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E32B10491FE243CE00A98135 /* Model */,
+				E32B10481FE243C500A98135 /* View */,
+				E32B10471FE2439400A98135 /* Controller */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E32B10441FE242DF00A98135 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				E32B104C1FE2441D00A98135 /* Controller */,
+				E32B104B1FE2441D00A98135 /* Model */,
+				E32B104A1FE2441D00A98135 /* View */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		E32B10451FE2430E00A98135 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				E32B104F1FE2447E00A98135 /* Controller */,
+				E32B104D1FE2447E00A98135 /* Model */,
+				E32B104E1FE2447E00A98135 /* View */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		E32B10461FE2435100A98135 /* FindHouse */ = {
+			isa = PBXGroup;
+			children = (
+				E32B10501FE2448D00A98135 /* Controller */,
+				E32B10521FE2448D00A98135 /* Model */,
+				E32B10511FE2448D00A98135 /* View */,
+			);
+			path = FindHouse;
+			sourceTree = "<group>";
+		};
+		E32B10471FE2439400A98135 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E32B105F1FE249FE00A98135 /* DHHomeViewController.h */,
+				E32B10601FE249FE00A98135 /* DHHomeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E32B10481FE243C500A98135 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E32B10491FE243CE00A98135 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E32B104A1FE2441D00A98135 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E32B104B1FE2441D00A98135 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E32B104C1FE2441D00A98135 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E32B105C1FE2491D00A98135 /* DHMineViewController.h */,
+				E32B105D1FE2491D00A98135 /* DHMineViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E32B104D1FE2447E00A98135 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E32B104E1FE2447E00A98135 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E32B104F1FE2447E00A98135 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E32B10591FE248FE00A98135 /* DHMessageViewController.h */,
+				E32B105A1FE248FE00A98135 /* DHMessageViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E32B10501FE2448D00A98135 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E32B10561FE248D400A98135 /* DHFindHouserViewController.h */,
+				E32B10571FE248D400A98135 /* DHFindHouserViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E32B10511FE2448D00A98135 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E32B10521FE2448D00A98135 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E488F6356803590B14296A8D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A7754D3D97B201DC52AC384 /* libPods-ShareGrab.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB99573F7394A7C8B84C602A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				53F0CC9FF31889998279D401 /* Pods-ShareGrab.debug.xcconfig */,
+				9B616CC0EBCF50E523547EB7 /* Pods-ShareGrab.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,9 +412,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E32B10051FE2119600A98135 /* Build configuration list for PBXNativeTarget "ShareGrab" */;
 			buildPhases = (
+				6ED9147CBD6D14B3AA495CD4 /* [CP] Check Pods Manifest.lock */,
 				E32B0FEB1FE2119600A98135 /* Sources */,
 				E32B0FEC1FE2119600A98135 /* Frameworks */,
 				E32B0FED1FE2119600A98135 /* Resources */,
+				FDF7B4273E0CA02D0C0AA767 /* [CP] Embed Pods Frameworks */,
+				2C28FC67D379E7E8943000C7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,36 +466,94 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E32B10161FE2169900A98135 /* Podfile in Resources */,
+				E32B10631FE26FEF00A98135 /* Assets.xcassets in Resources */,
 				E32B0FFF1FE2119600A98135 /* LaunchScreen.storyboard in Resources */,
-				E32B0FFC1FE2119600A98135 /* Assets.xcassets in Resources */,
-				E32B0FFA1FE2119600A98135 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2C28FC67D379E7E8943000C7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ShareGrab/Pods-ShareGrab-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShareGrab/Pods-ShareGrab-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6ED9147CBD6D14B3AA495CD4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShareGrab-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDF7B4273E0CA02D0C0AA767 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShareGrab/Pods-ShareGrab-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E32B0FEB1FE2119600A98135 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E32B0FF71FE2119600A98135 /* ViewController.m in Sources */,
+				E32B10271FE2180100A98135 /* UIView+Frame.m in Sources */,
+				E32B101E1FE217DD00A98135 /* YHAnimatedTransition.m in Sources */,
+				E32B105B1FE248FE00A98135 /* DHMessageViewController.m in Sources */,
+				E32B10421FE2278E00A98135 /* BaseViewController.m in Sources */,
+				E32B105E1FE2491D00A98135 /* DHMineViewController.m in Sources */,
+				E32B10361FE21A5800A98135 /* YHTabBar.m in Sources */,
+				E32B10191FE2177400A98135 /* BaseUINavigationController.m in Sources */,
+				E32B10581FE248D400A98135 /* DHFindHouserViewController.m in Sources */,
 				E32B10021FE2119600A98135 /* main.m in Sources */,
 				E32B0FF41FE2119600A98135 /* AppDelegate.m in Sources */,
+				E32B103F1FE21CC500A98135 /* AppDelegate+AppSever.m in Sources */,
+				E32B10261FE2180100A98135 /* NSString+Base64.m in Sources */,
+				E32B10351FE21A5800A98135 /* YHTabBarItem.m in Sources */,
+				E32B10611FE249FE00A98135 /* DHHomeViewController.m in Sources */,
+				E32B10341FE21A5800A98135 /* YHTabBarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E32B0FF81FE2119600A98135 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E32B0FF91FE2119600A98135 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E32B0FFD1FE2119600A98135 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -218,7 +613,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -267,7 +662,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -276,29 +671,41 @@
 		};
 		E32B10061FE2119600A98135 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53F0CC9FF31889998279D401 /* Pods-ShareGrab.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57767VFS85;
-				INFOPLIST_FILE = ShareGrab/Info.plist;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PREFIX_HEADER = "/Users/wupeng/Desktop/MyGitHub/ShareGrab/ShareGrab/Supporting File/PrefixHeader.h";
+				INFOPLIST_FILE = "$(SRCROOT)/ShareGrab/Supporting File/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hbbc.ShareGrab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
 		E32B10071FE2119600A98135 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B616CC0EBCF50E523547EB7 /* Pods-ShareGrab.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57767VFS85;
-				INFOPLIST_FILE = ShareGrab/Info.plist;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PREFIX_HEADER = "/Users/wupeng/Desktop/MyGitHub/ShareGrab/ShareGrab/Supporting File/PrefixHeader.h";
+				INFOPLIST_FILE = "$(SRCROOT)/ShareGrab/Supporting File/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hbbc.ShareGrab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
