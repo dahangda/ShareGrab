@@ -9,14 +9,14 @@
 #import "BaseViewController.h"
 
 @interface BaseViewController ()
-
+//YHScreenHeight - YHTopHeight -YHTabBarHeight
 @end
 
 @implementation BaseViewController
 - (UITableView *)tableView
 {
     if (_tableView == nil) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, YHScreenWidth, YHScreenHeight - YHTopHeight -YHTabBarHeight) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, YHScreenWidth, 200) style:UITableViewStylePlain];
         _tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
         _tableView.estimatedRowHeight = 0;
         _tableView.estimatedSectionHeaderHeight = 0;

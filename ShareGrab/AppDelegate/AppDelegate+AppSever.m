@@ -18,7 +18,7 @@
     
     [self.window makeKeyAndVisible];
     [[UIButton appearance] setExclusiveTouch:YES];
-    [UIActivityIndicatorView appearanceWhenContainedInInstancesOfClasses:[NSArray arrayWithObjects:[MBProgressHUD class], nil]].color = YHcolor;
+    [UIActivityIndicatorView appearanceWhenContainedInInstancesOfClasses:[NSArray arrayWithObjects:[MBProgressHUD class], nil]].color = YHColor;
     
 }
 -(UIViewController*) getCurrentVC

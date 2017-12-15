@@ -22,6 +22,6 @@
 #import "MBProgressHUD.h"
 #import "MJRefresh.h"
 #import "YYKit.h"
-
+#import "SDCycleScrollView.h"
 
 #endif /* PrefixHeader_h */

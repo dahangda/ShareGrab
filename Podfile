@@ -6,5 +6,6 @@ pod 'YYKit'
 pod 'MBProgressHUD', '~> 1.0.0'
 pod 'Masonry'
 pod 'YTKNetwork'
-pod 'SDWebImage', '~>3.8'
+pod 'SDWebImage', '~>4.0.0'
+pod 'SDCycleScrollView','~> 1.75'
 end

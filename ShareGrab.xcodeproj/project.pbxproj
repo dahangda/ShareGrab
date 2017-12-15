@@ -25,6 +25,8 @@
 		E32B105E1FE2491D00A98135 /* DHMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E32B105D1FE2491D00A98135 /* DHMineViewController.m */; };
 		E32B10611FE249FE00A98135 /* DHHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E32B10601FE249FE00A98135 /* DHHomeViewController.m */; };
 		E32B10631FE26FEF00A98135 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E32B10621FE26FEF00A98135 /* Assets.xcassets */; };
+		E3F1CA821FE387B600AEA043 /* JXButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F1CA801FE387B500AEA043 /* JXButton.m */; };
+		E3F1CA881FE3AAD100AEA043 /* MeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F1CA871FE3AAD100AEA043 /* MeTableViewCell.m */; };
 		E6DB59EED86B596D8580B150 /* libPods-ShareGrab.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A7754D3D97B201DC52AC384 /* libPods-ShareGrab.a */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +73,10 @@
 		E32B105F1FE249FE00A98135 /* DHHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHHomeViewController.h; sourceTree = "<group>"; };
 		E32B10601FE249FE00A98135 /* DHHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHHomeViewController.m; sourceTree = "<group>"; };
 		E32B10621FE26FEF00A98135 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E3F1CA801FE387B500AEA043 /* JXButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXButton.m; sourceTree = "<group>"; };
+		E3F1CA811FE387B600AEA043 /* JXButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXButton.h; sourceTree = "<group>"; };
+		E3F1CA861FE3AAD100AEA043 /* MeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeTableViewCell.h; sourceTree = "<group>"; };
+		E3F1CA871FE3AAD100AEA043 /* MeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,10 +167,10 @@
 			isa = PBXGroup;
 			children = (
 				E32B100D1FE2133D00A98135 /* main */,
+				E32B10431FE242C400A98135 /* Home */,
 				E32B10461FE2435100A98135 /* FindHouse */,
 				E32B10451FE2430E00A98135 /* Message */,
 				E32B10441FE242DF00A98135 /* Mine */,
-				E32B10431FE242C400A98135 /* Home */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -308,6 +314,10 @@
 		E32B10481FE243C500A98135 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E3F1CA861FE3AAD100AEA043 /* MeTableViewCell.h */,
+				E3F1CA871FE3AAD100AEA043 /* MeTableViewCell.m */,
+				E3F1CA811FE387B600AEA043 /* JXButton.h */,
+				E3F1CA801FE387B500AEA043 /* JXButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -536,6 +546,7 @@
 				E32B10271FE2180100A98135 /* UIView+Frame.m in Sources */,
 				E32B101E1FE217DD00A98135 /* YHAnimatedTransition.m in Sources */,
 				E32B105B1FE248FE00A98135 /* DHMessageViewController.m in Sources */,
+				E3F1CA821FE387B600AEA043 /* JXButton.m in Sources */,
 				E32B10421FE2278E00A98135 /* BaseViewController.m in Sources */,
 				E32B105E1FE2491D00A98135 /* DHMineViewController.m in Sources */,
 				E32B10361FE21A5800A98135 /* YHTabBar.m in Sources */,
@@ -548,6 +559,7 @@
 				E32B10351FE21A5800A98135 /* YHTabBarItem.m in Sources */,
 				E32B10611FE249FE00A98135 /* DHHomeViewController.m in Sources */,
 				E32B10341FE21A5800A98135 /* YHTabBarViewController.m in Sources */,
+				E3F1CA881FE3AAD100AEA043 /* MeTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

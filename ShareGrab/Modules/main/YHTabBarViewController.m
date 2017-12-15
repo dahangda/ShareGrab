@@ -84,7 +84,7 @@
     
     DHHomeViewController *homeVC = [[DHHomeViewController alloc]init];
     [self  configChildContrller:homeVC tittile:@"首页" tabBarItemImage:(NSString *)@"home_normal" itemSelImage:@"home_highlight"];
-    
+ 
     DHFindHouserViewController *findHourseVC = [[DHFindHouserViewController alloc]init];
     [self configChildContrller:(UIViewController *)findHourseVC tittile: @"找房"tabBarItemImage:@"tabbar_icon_find_normal" itemSelImage:@"tabbar_icon_find_highlight"];
     
@@ -109,8 +109,9 @@
     [_Controllers addObject:vc];
     //包装导航控制器
 //    vc.title = tittle;
+   
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
-    
+    [nav.navigationBar setBarTintColor:YHRGBColor(67, 166, 235)];
     
     [self addChildViewController:nav];
 }
