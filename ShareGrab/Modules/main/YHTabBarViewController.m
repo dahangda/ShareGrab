@@ -63,9 +63,9 @@
     [self.Controllers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         
         UIViewController *VC = (UIViewController *)obj;
-        
-       UIImage *selectedImage = VC.tabBarItem.selectedImage;
-        VC.tabBarItem.selectedImage = [selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        //配置图片的渲染模式
+//       UIImage *selectedImage = VC.tabBarItem.selectedImage;
+//        VC.tabBarItem.selectedImage = [selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 
         
         [self.TabBar addTabBarItem:VC.tabBarItem];
@@ -76,7 +76,7 @@
 
 
 
-#pragma mark ********************装载控制器
+#pragma mark ********************装载控制器携带各个信息tabBaritem
 
 -(void)setupControllers
 {
@@ -84,7 +84,7 @@
     
     DHHomeViewController *homeVC = [[DHHomeViewController alloc]init];
     [self  configChildContrller:homeVC tittile:@"首页" tabBarItemImage:(NSString *)@"home_normal" itemSelImage:@"home_highlight"];
- 
+ //home_highlight home_normal
     DHFindHouserViewController *findHourseVC = [[DHFindHouserViewController alloc]init];
     [self configChildContrller:(UIViewController *)findHourseVC tittile: @"找房"tabBarItemImage:@"tabbar_icon_find_normal" itemSelImage:@"tabbar_icon_find_highlight"];
     
@@ -104,11 +104,12 @@
 {
     vc.tabBarItem.title = tittle;//跟上面一样效果
     vc.tabBarItem.image = [UIImage imageNamed:imageName];
+    
    UIImage *selimage =  [[UIImage imageNamed:selName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     vc.tabBarItem.selectedImage = selimage;
     [_Controllers addObject:vc];
     //包装导航控制器
-//    vc.title = tittle;
+    vc.title = tittle;
    
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
     [nav.navigationBar setBarTintColor:YHRGBColor(67, 166, 235)];
@@ -126,14 +127,14 @@
     
     YHTabBar *YHtabBar = [[YHTabBar alloc]init];
     YHtabBar.frame = self.tabBar.bounds;
-    YHtabBar.backgroundColor = [UIColor colorWithRed:239/255.0 green:239/255.0 blue:239/255.0 alpha:1];
+//    YHtabBar.backgroundColor = [UIColor colorWithRed:239/255.0 green:239/255.0 blue:239/255.0 alpha:1];
     [YHtabBar addImageView];
     YHtabBar.delegate = self;
     _TabBar = YHtabBar;
     self.TabBar.itemImageRatio = 0.7;
     self.TabBar.itemTitleFont          = YHSYSTEMFONT(9);
     self.TabBar.itemTitleColor         = YHRGBColor(255, 255, 255);
-    self.TabBar.selectedItemTitleColor =YHRGBColor(67,166,235);
+   self.TabBar.selectedItemTitleColor =YHRGBColor(136,198,240);
     [self.tabBar addSubview:YHtabBar];
     [self configTabBar];
    

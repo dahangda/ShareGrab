@@ -18,6 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self initWindow];
     [self initUserStatusManager];
+    [self  userLocation];
     return YES;
 }
 

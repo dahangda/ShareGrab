@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "YHTabBarViewController.h"
+#import <AMapLocationKit/AMapLocationKit.h>
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 /** 主要控制器 **/
 @property(nonatomic,strong) YHTabBarViewController * mainTabBarController;
-
+@property (nonatomic, strong)AMapLocationManager *manager;
 @end
 

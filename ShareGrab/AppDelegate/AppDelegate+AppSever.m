@@ -9,6 +9,8 @@
 #import "AppDelegate+AppSever.h"
 
 @implementation AppDelegate (AppSever)
+
+
 #pragma mark ********************初始化窗口
 - (void)initWindow
 {
@@ -78,6 +80,37 @@
 //
 //}
 
+#pragma mark ********************定位
+- (void)userLocation{
+     [AMapServices sharedServices].apiKey = @"9bfefd58507caa2e84a84635ce6db5c0";
+ AMapLocationManager * locationManger = [[AMapLocationManager alloc] init];
+    self.manager  = locationManger;
+    locationManger.delegate = self;
+    //       定位超时时间，最低2s
+    locationManger.locationTimeout = 2;
+    //       逆地理请求超时时间，最低2s，此处设置为10s
+    locationManger.reGeocodeTimeout = 2;
+    
+    [locationManger requestLocationWithReGeocode:YES completionBlock:^(CLLocation *location, AMapLocationReGeocode *regeocode, NSError *error) {
+      struct CLLocationCoordinate2D UserLocation;
+        UserLocation.latitude = location.coordinate.latitude;
+        UserLocation.longitude = location.coordinate.longitude;
+        YHLog(@"------%f",location.coordinate.latitude);
+        YHLog(@"------%f",location.coordinate.longitude);
+        CLGeocoder *geocoder = [[CLGeocoder alloc]init];
+        CLLocation *alocation =[[CLLocation alloc] initWithLatitude:UserLocation.latitude longitude:UserLocation.longitude];
+        [geocoder reverseGeocodeLocation:alocation completionHandler:^(NSArray *placemarks,NSError *error){
+            for(CLPlacemark *placemark in placemarks)
+            {
+               NSString *myLocation = [NSString stringWithFormat:@"%@%@%@",placemark.locality,placemark.subLocality,placemark.name];
+                YHLog(@"-----%@-----",myLocation);
+                YHLog(@"-----%@----",placemarks);
+            }
+            
+        }];
+        
+    }];
+}
 + (AppDelegate *)shareAppDelegate{
     return (AppDelegate *)[[UIApplication sharedApplication] delegate];
 }

@@ -18,6 +18,7 @@
 - (void)initUserStatusManager;
 
 - (void)adStart;
+- (void)userLocation;
 /**
  当前顶层控制器
  */

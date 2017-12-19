@@ -10,8 +10,9 @@
 @interface MeTableViewCell()
 @property (nonatomic, strong) UIImageView *titleIcon;//标题图标
 @property (nonatomic, strong) UILabel *titleLbl;//标题
-@property (nonatomic, strong) UILabel *detaileLbl;//内容
-@property (nonatomic, strong) UIImageView *arrowIcon;//右箭头图标
+@property (nonatomic, strong) UILabel *oldLbl;//内容
+
+@property (nonatomic, strong) UIImageView *arrowIcon;//距离
 @end
 @implementation MeTableViewCell
 

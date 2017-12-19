@@ -46,13 +46,13 @@
 }
 
 
-#pragma mark ********************增加baritem
+#pragma mark ********************增加bar item
 
 - (void)addTabBarItem:(UITabBarItem *)item
 {    YHTabBarItem * tabBarItem= [[YHTabBarItem alloc]initWithItemImageRatio:self.itemImageRatio];
     tabBarItem.itemTitleFont          = self.itemTitleFont;
     tabBarItem.itemTitleColor         = self.itemTitleColor;
-    tabBarItem.selectedItemTitleColor = self.selectedItemTitleColor;
+  tabBarItem.selectedItemTitleColor = self.selectedItemTitleColor;
     tabBarItem.tabBarItem = item;
     
     [tabBarItem addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -80,10 +80,11 @@
         if (btn.tag == self.selItem.tag) {
             self.selItem.userInteractionEnabled = NO;
         }
-        self.selItem.selected =NO;
+        self.selItem.selected = NO;
         self.selItem.backgroundColor = YHRGBColor(67, 166, 235);
         btn.selected = YES;
-        btn.backgroundColor = YHRGBColor(255, 255, 255);
+//        btn.backgroundColor = YHRGBColor(255, 255, 255);
+
         self.selItem = btn;
         
     }

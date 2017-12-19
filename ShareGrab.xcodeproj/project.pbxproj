@@ -25,6 +25,13 @@
 		E32B105E1FE2491D00A98135 /* DHMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E32B105D1FE2491D00A98135 /* DHMineViewController.m */; };
 		E32B10611FE249FE00A98135 /* DHHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E32B10601FE249FE00A98135 /* DHHomeViewController.m */; };
 		E32B10631FE26FEF00A98135 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E32B10621FE26FEF00A98135 /* Assets.xcassets */; };
+		E36B34AD1FE5F60500B7B31C /* Back_image.png in Resources */ = {isa = PBXBuildFile; fileRef = E36B34AC1FE5F60500B7B31C /* Back_image.png */; };
+		E36B34B91FE7885D00B7B31C /* NSArray+log.m in Sources */ = {isa = PBXBuildFile; fileRef = E36B34B81FE7885D00B7B31C /* NSArray+log.m */; };
+		E36B34C31FE78FCC00B7B31C /* UIButton+NMCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = E36B34C11FE78FCC00B7B31C /* UIButton+NMCategory.m */; };
+		E36B34C51FE79E9A00B7B31C /* 加入我们.png in Resources */ = {isa = PBXBuildFile; fileRef = E36B34C41FE79E9900B7B31C /* 加入我们.png */; };
+		E36B34C81FE7B06000B7B31C /* LRGlowingButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E36B34C71FE7B05F00B7B31C /* LRGlowingButton.m */; };
+		E36B34D11FE7D06F00B7B31C /* MineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E36B34CF1FE7D06F00B7B31C /* MineTableViewCell.m */; };
+		E36B34D21FE7D06F00B7B31C /* MineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E36B34D01FE7D06F00B7B31C /* MineTableViewCell.xib */; };
 		E3F1CA821FE387B600AEA043 /* JXButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F1CA801FE387B500AEA043 /* JXButton.m */; };
 		E3F1CA881FE3AAD100AEA043 /* MeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F1CA871FE3AAD100AEA043 /* MeTableViewCell.m */; };
 		E6DB59EED86B596D8580B150 /* libPods-ShareGrab.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A7754D3D97B201DC52AC384 /* libPods-ShareGrab.a */; };
@@ -73,6 +80,17 @@
 		E32B105F1FE249FE00A98135 /* DHHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHHomeViewController.h; sourceTree = "<group>"; };
 		E32B10601FE249FE00A98135 /* DHHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHHomeViewController.m; sourceTree = "<group>"; };
 		E32B10621FE26FEF00A98135 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E36B34AC1FE5F60500B7B31C /* Back_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Back_image.png; sourceTree = "<group>"; };
+		E36B34B71FE7885D00B7B31C /* NSArray+log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+log.h"; sourceTree = "<group>"; };
+		E36B34B81FE7885D00B7B31C /* NSArray+log.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+log.m"; sourceTree = "<group>"; };
+		E36B34C11FE78FCC00B7B31C /* UIButton+NMCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+NMCategory.m"; sourceTree = "<group>"; };
+		E36B34C21FE78FCC00B7B31C /* UIButton+NMCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+NMCategory.h"; sourceTree = "<group>"; };
+		E36B34C41FE79E9900B7B31C /* 加入我们.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "加入我们.png"; sourceTree = "<group>"; };
+		E36B34C61FE7B05F00B7B31C /* LRGlowingButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRGlowingButton.h; sourceTree = "<group>"; };
+		E36B34C71FE7B05F00B7B31C /* LRGlowingButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRGlowingButton.m; sourceTree = "<group>"; };
+		E36B34CE1FE7D06F00B7B31C /* MineTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineTableViewCell.h; sourceTree = "<group>"; };
+		E36B34CF1FE7D06F00B7B31C /* MineTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineTableViewCell.m; sourceTree = "<group>"; };
+		E36B34D01FE7D06F00B7B31C /* MineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineTableViewCell.xib; sourceTree = "<group>"; };
 		E3F1CA801FE387B500AEA043 /* JXButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXButton.m; sourceTree = "<group>"; };
 		E3F1CA811FE387B600AEA043 /* JXButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXButton.h; sourceTree = "<group>"; };
 		E3F1CA861FE3AAD100AEA043 /* MeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeTableViewCell.h; sourceTree = "<group>"; };
@@ -238,6 +256,8 @@
 		E32B101F1FE2180100A98135 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				E36B34C01FE78FB900B7B31C /* Button */,
+				E36B34BA1FE7886800B7B31C /* NSArray */,
 				E32B10201FE2180100A98135 /* NSString */,
 				E32B10231FE2180100A98135 /* UIView */,
 			);
@@ -265,6 +285,7 @@
 		E32B10431FE242C400A98135 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E36B34A91FE5F4B400B7B31C /* Resource */,
 				E32B10491FE243CE00A98135 /* Model */,
 				E32B10481FE243C500A98135 /* View */,
 				E32B10471FE2439400A98135 /* Controller */,
@@ -318,6 +339,9 @@
 				E3F1CA871FE3AAD100AEA043 /* MeTableViewCell.m */,
 				E3F1CA811FE387B600AEA043 /* JXButton.h */,
 				E3F1CA801FE387B500AEA043 /* JXButton.m */,
+				E36B34CE1FE7D06F00B7B31C /* MineTableViewCell.h */,
+				E36B34CF1FE7D06F00B7B31C /* MineTableViewCell.m */,
+				E36B34D01FE7D06F00B7B31C /* MineTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -398,6 +422,35 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		E36B34A91FE5F4B400B7B31C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				E36B34C41FE79E9900B7B31C /* 加入我们.png */,
+				E36B34AC1FE5F60500B7B31C /* Back_image.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		E36B34BA1FE7886800B7B31C /* NSArray */ = {
+			isa = PBXGroup;
+			children = (
+				E36B34B71FE7885D00B7B31C /* NSArray+log.h */,
+				E36B34B81FE7885D00B7B31C /* NSArray+log.m */,
+			);
+			path = NSArray;
+			sourceTree = "<group>";
+		};
+		E36B34C01FE78FB900B7B31C /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				E36B34C61FE7B05F00B7B31C /* LRGlowingButton.h */,
+				E36B34C71FE7B05F00B7B31C /* LRGlowingButton.m */,
+				E36B34C21FE78FCC00B7B31C /* UIButton+NMCategory.h */,
+				E36B34C11FE78FCC00B7B31C /* UIButton+NMCategory.m */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
 		E488F6356803590B14296A8D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -476,9 +529,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E36B34AD1FE5F60500B7B31C /* Back_image.png in Resources */,
 				E32B10161FE2169900A98135 /* Podfile in Resources */,
+				E36B34D21FE7D06F00B7B31C /* MineTableViewCell.xib in Resources */,
 				E32B10631FE26FEF00A98135 /* Assets.xcassets in Resources */,
 				E32B0FFF1FE2119600A98135 /* LaunchScreen.storyboard in Resources */,
+				E36B34C51FE79E9A00B7B31C /* 加入我们.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +548,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ShareGrab/Pods-ShareGrab-resources.sh",
+				"${PODS_ROOT}/AMap2DMap/MAMapKit.framework/AMap.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -547,7 +604,9 @@
 				E32B101E1FE217DD00A98135 /* YHAnimatedTransition.m in Sources */,
 				E32B105B1FE248FE00A98135 /* DHMessageViewController.m in Sources */,
 				E3F1CA821FE387B600AEA043 /* JXButton.m in Sources */,
+				E36B34D11FE7D06F00B7B31C /* MineTableViewCell.m in Sources */,
 				E32B10421FE2278E00A98135 /* BaseViewController.m in Sources */,
+				E36B34C31FE78FCC00B7B31C /* UIButton+NMCategory.m in Sources */,
 				E32B105E1FE2491D00A98135 /* DHMineViewController.m in Sources */,
 				E32B10361FE21A5800A98135 /* YHTabBar.m in Sources */,
 				E32B10191FE2177400A98135 /* BaseUINavigationController.m in Sources */,
@@ -558,6 +617,8 @@
 				E32B10261FE2180100A98135 /* NSString+Base64.m in Sources */,
 				E32B10351FE21A5800A98135 /* YHTabBarItem.m in Sources */,
 				E32B10611FE249FE00A98135 /* DHHomeViewController.m in Sources */,
+				E36B34B91FE7885D00B7B31C /* NSArray+log.m in Sources */,
+				E36B34C81FE7B06000B7B31C /* LRGlowingButton.m in Sources */,
 				E32B10341FE21A5800A98135 /* YHTabBarViewController.m in Sources */,
 				E3F1CA881FE3AAD100AEA043 /* MeTableViewCell.m in Sources */,
 			);
@@ -688,6 +749,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57767VFS85;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ShareGrab/Supporting\\ File/GaoDeMap",
+					"$(PROJECT_DIR)/ShareGrab/Supporting\\ File/GaoDeMap",
+					"$(PROJECT_DIR)/ShareGrab/Supporting\\ File/GaoDeMap",
+				);
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PREFIX_HEADER = "/Users/wupeng/Desktop/MyGitHub/ShareGrab/ShareGrab/Supporting File/PrefixHeader.h";
 				INFOPLIST_FILE = "$(SRCROOT)/ShareGrab/Supporting File/Info.plist";
@@ -708,6 +775,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57767VFS85;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ShareGrab/Supporting\\ File/GaoDeMap",
+					"$(PROJECT_DIR)/ShareGrab/Supporting\\ File/GaoDeMap",
+					"$(PROJECT_DIR)/ShareGrab/Supporting\\ File/GaoDeMap",
+				);
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PREFIX_HEADER = "/Users/wupeng/Desktop/MyGitHub/ShareGrab/ShareGrab/Supporting File/PrefixHeader.h";
 				INFOPLIST_FILE = "$(SRCROOT)/ShareGrab/Supporting File/Info.plist";

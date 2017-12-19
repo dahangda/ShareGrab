@@ -23,5 +23,11 @@
 #import "MJRefresh.h"
 #import "YYKit.h"
 #import "SDCycleScrollView.h"
+/*地图定位
+ */
+#import <AMapSearchKit/AMapSearchKit.h>
+#import <MAMapKit/MAMapKit.h>
+#import <AMapLocationKit/AMapLocationKit.h>
+#import <AMapFoundationKit/AMapFoundationKit.h>
 
 #endif /* PrefixHeader_h */

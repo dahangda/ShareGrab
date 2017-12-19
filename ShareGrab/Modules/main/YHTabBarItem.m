@@ -16,10 +16,12 @@
         
         self.imageView.contentMode = UIViewContentModeCenter;
         self.titleLabel.textAlignment = NSTextAlignmentCenter;
+    
         
+    }
         //self.tabBarBadge = [[TabBarBadge alloc] init];
         //[self addSubview:self.tabBarBadge];
-    }
+    
     return self;
 }
 
@@ -54,7 +56,7 @@
     
     _selectedItemTitleColor = selectedItemTitleColor;
     
-    [self setTitleColor:selectedItemTitleColor forState:UIControlStateSelected];
+    [self setTitleColor:selectedItemTitleColor forState:UIControlStateHighlighted];
 }
 #pragma mark ********************依照给的item设置内部
 
@@ -64,7 +66,9 @@
     self.titleLabel.font =YHSYSTEMFONT(14);
     [self setTitle:tabBarItem.title forState:UIControlStateNormal];
     [self setImage:tabBarItem.image forState:UIControlStateNormal];
-    [self setImage:tabBarItem.selectedImage forState:UIControlStateSelected ];
+    [self setTitle:tabBarItem.title forState:UIControlStateHighlighted];
+//    [self setImage:tabBarItem.selectedImage forState:UIControlStateSelected ];
+    
     
 
 }

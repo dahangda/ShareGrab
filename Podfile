@@ -8,4 +8,8 @@ pod 'Masonry'
 pod 'YTKNetwork'
 pod 'SDWebImage', '~>4.0.0'
 pod 'SDCycleScrollView','~> 1.75'
+pod 'AMapFoundation'
+pod 'AMapLocation'
+pod 'AMapSearch'
+pod 'AMap2DMap'
 end
