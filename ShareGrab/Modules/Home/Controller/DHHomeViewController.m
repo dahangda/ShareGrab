@@ -7,52 +7,61 @@
 // 180 1090  680
 #import "DHHomeViewController.h"
 #import "JXButton.h"
-#import "MeTableViewCell.h"
+#import "MineTableViewCell.h"
 #import "SDCycleScrollView.h"
 #import "UIButton+NMCategory.h"
+#import "homeMidView.h"
 
 #define  YHHeaderHeight   (260*Iphone6ScaleWidth+YHStatusBarHeight)
 #define  HeadScroViewH    (YHScreen_H - YHTabBarHeight)*0.23
-#define  midViewH         (YHScreen_H - YHTabBarHeight)*0.2
+#define  midViewH         (YHScreen_H - YHTabBarHeight)*0.18
 @interface DHHomeViewController()<UITableViewDelegate,UITableViewDataSource,SDCycleScrollViewDelegate>
 
 @property(nonatomic,copy) NSMutableArray *dataSource;
-
+@property(nonatomic,copy) NSMutableArray  *midData;
 @end
 
 @implementation DHHomeViewController
 
 - (NSMutableArray *)dataSource{
     if (_dataSource == nil) {
-        NSDictionary *myWallet = @{@"titleText":@"我的钱包",@"clickSelector":@"",@"title_icon":@"qianb",@"detailText":@"10.00",@"arrow_icon":@"arrow_icon"};
-        NSDictionary *myMission = @{@"titleText":@"我的任务",@"clickSelector":@"",@"title_icon":@"renw",@"arrow_icon":@"arrow_icon"};
-        NSDictionary *myFriends = @{@"titleText":@"我的好友",@"clickSelector":@"",@"title_icon":@"haoy",@"arrow_icon":@"arrow_icon"};
-        NSDictionary *myLevel = @{@"titleText":@"我的等级",@"clickSelector":@"",@"title_icon":@"dengji",@"detailText":@"LV10",@"arrow_icon":@"arrow_icon"};
-         _dataSource = @[myWallet,myMission,myFriends,myLevel,myWallet,myMission,myFriends,myLevel];
+        NSDictionary *myGrab = @{@"title_icon":@"tuli",
+                                   @"titleText":@"我的挖掘机",
+                                   @"distanceText":@"10km",
+                                   @"oldText":@"九成新",
+                                   @"colorText":@"黄色",
+                                   @"prudentTimeLblText":@"一年",
+                                   @"addressLblText":@"北京市石景山区苹果园一号院"
+                                   };
+        
+        
+         _dataSource = [@[myGrab,myGrab,myGrab,myGrab,myGrab,myGrab,myGrab,myGrab] copy];
     }
+    
     return _dataSource;
 }
 
-
-
-
-
-
-- (NSMutableArray *)imagesURLStrings{
-    if (_imagesURLStrings == nil) {
-        _imagesURLStrings = @[
-                              @"https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a4b3d7085dee3d6d2293d48b252b5910/0e2442a7d933c89524cd5cd4d51373f0830200ea.jpg",
-                              @"https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a41eb338dd33c895a62bcb3bb72e47c2/5fdf8db1cb134954a2192ccb524e9258d1094a1e.jpg",
-                              @"http://c.hiphotos.baidu.com/image/w%3D400/sign=c2318ff84334970a4773112fa5c8d1c0/b7fd5266d0160924c1fae5ccd60735fae7cd340d.jpg"
-                              ];
-    }
-    return  _imagesURLStrings;
+- (NSMutableArray *)midData{
+    if (_midData == Nil) {
+        NSDictionary *mid = @{@"button_icon":@"tuli",
+                              @"button_text":@"手机"};
+                              _midData = [@[mid,mid,mid] copy] ;
     
+    }
+    return _midData;
 }
+
+
+
+
+
+
+
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
 #pragma mark ********************导航栏背景图片
     
     [self.navigationController.navigationBar setBackgroundImage:
@@ -112,13 +121,20 @@
     
     
     self.tableView.height = YHScreen_H - YHTabBarHeight;
-    self.tableView.contentInset = UIEdgeInsetsMake(HeadScroViewH+midViewH, 0, 0, 0);
+    self.tableView.contentInset = UIEdgeInsetsMake(HeadScroViewH+midViewH, 0, 30, 0);
     self.tableView.mj_footer.hidden = YES;
     self.tableView.mj_header.hidden = YES;
-    [self.tableView registerClass:[MeTableViewCell class
-                                   ] forCellReuseIdentifier:@"MeTableViewCell"];
+
+    [self.tableView registerClass:[MineTableViewCell class
+                                   ] forCellReuseIdentifier:@"MineTableViewCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"MineTableViewCell" bundle:nil] forCellReuseIdentifier:@"MineTableViewCell"];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
+//    self.tableView.rowHeight = UITableViewAutomaticDimension;
+//    // 设置tableView的估算高度
+//    self.tableView.estimatedRowHeight = 200;
+    
     
     SDCycleScrollView *headScroView= [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, -(HeadScroViewH+midViewH),  YHScreenWidth,HeadScroViewH) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
     //headScroView  = SDCycleScrollViewPageContolAlimentRight;
@@ -131,8 +147,26 @@
     headScroView.currentPageDotColor = [UIColor whiteColor]; // 自定义分页控件小圆标颜色
     headScroView.backgroundColor = [UIColor blueColor];
     
-    UIView *midView = [[UIView alloc]initWithFrame:CGRectMake(0, -midViewH, YHScreenWidth, midViewH) ];
-    midView.backgroundColor = [UIColor redColor];
+    homeMidView *midView = [[homeMidView alloc]initWithFrame:CGRectMake(0, -midViewH, YHScreenWidth, midViewH) ];
+    midView.backgroundColor = [UIColor whiteColor];
+    
+    midView.midViewDatas = [@[@{@"1":@"1",
+                                @"11":@"手机"
+                                },
+                            @{@"2":@"2",
+                              @"22":@"单车"
+                              },
+                            @{@"3":@"3",
+                              @"33":@"衣服"
+                              },
+                            @{@"4":@"4",
+                              @"44":@"房屋"
+                              },
+                            @{@"5":@"5",
+                              @"55":@"汽车"
+                              }] copy];
+    
+    
     
      [self.tableView addSubview:headScroView];
     [self.tableView  addSubview:midView];
@@ -182,11 +216,12 @@
 
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 100.0f;
+    return YHScreenHeight*0.18 ;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    MeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MeTableViewCell" forIndexPath:indexPath];
+    
+    MineTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MineTableViewCell" forIndexPath:indexPath];
     cell.cellData = _dataSource[indexPath.row];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;

@@ -32,6 +32,14 @@
 		E36B34C81FE7B06000B7B31C /* LRGlowingButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E36B34C71FE7B05F00B7B31C /* LRGlowingButton.m */; };
 		E36B34D11FE7D06F00B7B31C /* MineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E36B34CF1FE7D06F00B7B31C /* MineTableViewCell.m */; };
 		E36B34D21FE7D06F00B7B31C /* MineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E36B34D01FE7D06F00B7B31C /* MineTableViewCell.xib */; };
+		E36B34D41FE8DEBD00B7B31C /* tuli.png in Resources */ = {isa = PBXBuildFile; fileRef = E36B34D31FE8DEBD00B7B31C /* tuli.png */; };
+		E36B34DD1FE915DD00B7B31C /* homeMidView.m in Sources */ = {isa = PBXBuildFile; fileRef = E36B34DC1FE915DD00B7B31C /* homeMidView.m */; };
+		E36B34E31FE928AD00B7B31C /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = E36B34DE1FE928A200B7B31C /* 3.png */; };
+		E36B34E41FE928AD00B7B31C /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = E36B34DF1FE928A300B7B31C /* 2.png */; };
+		E36B34E51FE928AD00B7B31C /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = E36B34E01FE928A300B7B31C /* 1.png */; };
+		E36B34E61FE928AD00B7B31C /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = E36B34E11FE928A800B7B31C /* 5.png */; };
+		E36B34E71FE928AD00B7B31C /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = E36B34E21FE928AD00B7B31C /* 4.png */; };
+		E36B34EA1FE9377B00B7B31C /* midButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E36B34E91FE9377B00B7B31C /* midButton.m */; };
 		E3F1CA821FE387B600AEA043 /* JXButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F1CA801FE387B500AEA043 /* JXButton.m */; };
 		E3F1CA881FE3AAD100AEA043 /* MeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F1CA871FE3AAD100AEA043 /* MeTableViewCell.m */; };
 		E6DB59EED86B596D8580B150 /* libPods-ShareGrab.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A7754D3D97B201DC52AC384 /* libPods-ShareGrab.a */; };
@@ -91,6 +99,16 @@
 		E36B34CE1FE7D06F00B7B31C /* MineTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineTableViewCell.h; sourceTree = "<group>"; };
 		E36B34CF1FE7D06F00B7B31C /* MineTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineTableViewCell.m; sourceTree = "<group>"; };
 		E36B34D01FE7D06F00B7B31C /* MineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineTableViewCell.xib; sourceTree = "<group>"; };
+		E36B34D31FE8DEBD00B7B31C /* tuli.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tuli.png; sourceTree = "<group>"; };
+		E36B34DB1FE915DD00B7B31C /* homeMidView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = homeMidView.h; sourceTree = "<group>"; };
+		E36B34DC1FE915DD00B7B31C /* homeMidView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = homeMidView.m; sourceTree = "<group>"; };
+		E36B34DE1FE928A200B7B31C /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		E36B34DF1FE928A300B7B31C /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		E36B34E01FE928A300B7B31C /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		E36B34E11FE928A800B7B31C /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		E36B34E21FE928AD00B7B31C /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		E36B34E81FE9377B00B7B31C /* midButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = midButton.h; sourceTree = "<group>"; };
+		E36B34E91FE9377B00B7B31C /* midButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = midButton.m; sourceTree = "<group>"; };
 		E3F1CA801FE387B500AEA043 /* JXButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXButton.m; sourceTree = "<group>"; };
 		E3F1CA811FE387B600AEA043 /* JXButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXButton.h; sourceTree = "<group>"; };
 		E3F1CA861FE3AAD100AEA043 /* MeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeTableViewCell.h; sourceTree = "<group>"; };
@@ -285,10 +303,10 @@
 		E32B10431FE242C400A98135 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E32B10471FE2439400A98135 /* Controller */,
+				E32B10481FE243C500A98135 /* View */,
 				E36B34A91FE5F4B400B7B31C /* Resource */,
 				E32B10491FE243CE00A98135 /* Model */,
-				E32B10481FE243C500A98135 /* View */,
-				E32B10471FE2439400A98135 /* Controller */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -342,6 +360,10 @@
 				E36B34CE1FE7D06F00B7B31C /* MineTableViewCell.h */,
 				E36B34CF1FE7D06F00B7B31C /* MineTableViewCell.m */,
 				E36B34D01FE7D06F00B7B31C /* MineTableViewCell.xib */,
+				E36B34DB1FE915DD00B7B31C /* homeMidView.h */,
+				E36B34DC1FE915DD00B7B31C /* homeMidView.m */,
+				E36B34E81FE9377B00B7B31C /* midButton.h */,
+				E36B34E91FE9377B00B7B31C /* midButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -425,6 +447,12 @@
 		E36B34A91FE5F4B400B7B31C /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				E36B34E11FE928A800B7B31C /* 5.png */,
+				E36B34E21FE928AD00B7B31C /* 4.png */,
+				E36B34E01FE928A300B7B31C /* 1.png */,
+				E36B34DE1FE928A200B7B31C /* 3.png */,
+				E36B34DF1FE928A300B7B31C /* 2.png */,
+				E36B34D31FE8DEBD00B7B31C /* tuli.png */,
 				E36B34C41FE79E9900B7B31C /* 加入我们.png */,
 				E36B34AC1FE5F60500B7B31C /* Back_image.png */,
 			);
@@ -529,10 +557,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E36B34E51FE928AD00B7B31C /* 1.png in Resources */,
 				E36B34AD1FE5F60500B7B31C /* Back_image.png in Resources */,
+				E36B34E31FE928AD00B7B31C /* 3.png in Resources */,
 				E32B10161FE2169900A98135 /* Podfile in Resources */,
+				E36B34E41FE928AD00B7B31C /* 2.png in Resources */,
 				E36B34D21FE7D06F00B7B31C /* MineTableViewCell.xib in Resources */,
+				E36B34E71FE928AD00B7B31C /* 4.png in Resources */,
 				E32B10631FE26FEF00A98135 /* Assets.xcassets in Resources */,
+				E36B34E61FE928AD00B7B31C /* 5.png in Resources */,
+				E36B34D41FE8DEBD00B7B31C /* tuli.png in Resources */,
 				E32B0FFF1FE2119600A98135 /* LaunchScreen.storyboard in Resources */,
 				E36B34C51FE79E9A00B7B31C /* 加入我们.png in Resources */,
 			);
@@ -610,12 +644,14 @@
 				E32B105E1FE2491D00A98135 /* DHMineViewController.m in Sources */,
 				E32B10361FE21A5800A98135 /* YHTabBar.m in Sources */,
 				E32B10191FE2177400A98135 /* BaseUINavigationController.m in Sources */,
+				E36B34EA1FE9377B00B7B31C /* midButton.m in Sources */,
 				E32B10581FE248D400A98135 /* DHFindHouserViewController.m in Sources */,
 				E32B10021FE2119600A98135 /* main.m in Sources */,
 				E32B0FF41FE2119600A98135 /* AppDelegate.m in Sources */,
 				E32B103F1FE21CC500A98135 /* AppDelegate+AppSever.m in Sources */,
 				E32B10261FE2180100A98135 /* NSString+Base64.m in Sources */,
 				E32B10351FE21A5800A98135 /* YHTabBarItem.m in Sources */,
+				E36B34DD1FE915DD00B7B31C /* homeMidView.m in Sources */,
 				E32B10611FE249FE00A98135 /* DHHomeViewController.m in Sources */,
 				E36B34B91FE7885D00B7B31C /* NSArray+log.m in Sources */,
 				E36B34C81FE7B06000B7B31C /* LRGlowingButton.m in Sources */,
