@@ -83,7 +83,7 @@
         self.selItem.selected = NO;
         self.selItem.backgroundColor = YHRGBColor(67, 166, 235);
         btn.selected = YES;
-//        btn.backgroundColor = YHRGBColor(255, 255, 255);
+
 
         self.selItem = btn;
         

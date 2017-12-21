@@ -29,7 +29,6 @@
 		E36B34B91FE7885D00B7B31C /* NSArray+log.m in Sources */ = {isa = PBXBuildFile; fileRef = E36B34B81FE7885D00B7B31C /* NSArray+log.m */; };
 		E36B34C31FE78FCC00B7B31C /* UIButton+NMCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = E36B34C11FE78FCC00B7B31C /* UIButton+NMCategory.m */; };
 		E36B34C51FE79E9A00B7B31C /* 加入我们.png in Resources */ = {isa = PBXBuildFile; fileRef = E36B34C41FE79E9900B7B31C /* 加入我们.png */; };
-		E36B34C81FE7B06000B7B31C /* LRGlowingButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E36B34C71FE7B05F00B7B31C /* LRGlowingButton.m */; };
 		E36B34D11FE7D06F00B7B31C /* MineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E36B34CF1FE7D06F00B7B31C /* MineTableViewCell.m */; };
 		E36B34D21FE7D06F00B7B31C /* MineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E36B34D01FE7D06F00B7B31C /* MineTableViewCell.xib */; };
 		E36B34D41FE8DEBD00B7B31C /* tuli.png in Resources */ = {isa = PBXBuildFile; fileRef = E36B34D31FE8DEBD00B7B31C /* tuli.png */; };
@@ -51,6 +50,13 @@
 		E391E3261FEA498B003FF555 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E391E31D1FEA498B003FF555 /* AFURLSessionManager.m */; };
 		E391E32B1FEA4A04003FF555 /* NetworkSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = E391E3281FEA4A03003FF555 /* NetworkSingleton.m */; };
 		E391E3311FEAA48B003FF555 /* Json_model.m in Sources */ = {isa = PBXBuildFile; fileRef = E391E3301FEAA48B003FF555 /* Json_model.m */; };
+		E391E3351FEB4F7A003FF555 /* ShareSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E391E3341FEB4F7A003FF555 /* ShareSearchViewController.m */; };
+		E391E3391FEB633B003FF555 /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E391E3381FEB633B003FF555 /* SearchResultViewController.m */; };
+		E391E33B1FEB9A13003FF555 /* 22.png in Resources */ = {isa = PBXBuildFile; fileRef = E391E33A1FEB9A12003FF555 /* 22.png */; };
+		E391E33D1FEB9A21003FF555 /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = E391E33C1FEB9A21003FF555 /* 11.png */; };
+		E391E33F1FEBA016003FF555 /* 33.png in Resources */ = {isa = PBXBuildFile; fileRef = E391E33E1FEBA015003FF555 /* 33.png */; };
+		E391E3421FEBA268003FF555 /* YHUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E391E3411FEBA268003FF555 /* YHUIButton.m */; };
+		E391E3441FEBCC14003FF555 /* 001.png in Resources */ = {isa = PBXBuildFile; fileRef = E391E3431FEBCC14003FF555 /* 001.png */; };
 		E3F1CA821FE387B600AEA043 /* JXButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F1CA801FE387B500AEA043 /* JXButton.m */; };
 		E3F1CA881FE3AAD100AEA043 /* MeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F1CA871FE3AAD100AEA043 /* MeTableViewCell.m */; };
 		E6DB59EED86B596D8580B150 /* libPods-ShareGrab.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A7754D3D97B201DC52AC384 /* libPods-ShareGrab.a */; };
@@ -105,8 +111,6 @@
 		E36B34C11FE78FCC00B7B31C /* UIButton+NMCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+NMCategory.m"; sourceTree = "<group>"; };
 		E36B34C21FE78FCC00B7B31C /* UIButton+NMCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+NMCategory.h"; sourceTree = "<group>"; };
 		E36B34C41FE79E9900B7B31C /* 加入我们.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "加入我们.png"; sourceTree = "<group>"; };
-		E36B34C61FE7B05F00B7B31C /* LRGlowingButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRGlowingButton.h; sourceTree = "<group>"; };
-		E36B34C71FE7B05F00B7B31C /* LRGlowingButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRGlowingButton.m; sourceTree = "<group>"; };
 		E36B34CE1FE7D06F00B7B31C /* MineTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineTableViewCell.h; sourceTree = "<group>"; };
 		E36B34CF1FE7D06F00B7B31C /* MineTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineTableViewCell.m; sourceTree = "<group>"; };
 		E36B34D01FE7D06F00B7B31C /* MineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineTableViewCell.xib; sourceTree = "<group>"; };
@@ -143,6 +147,16 @@
 		E391E3291FEA4A04003FF555 /* NetworkSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkSingleton.h; sourceTree = "<group>"; };
 		E391E32F1FEAA48B003FF555 /* Json_model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Json_model.h; sourceTree = "<group>"; };
 		E391E3301FEAA48B003FF555 /* Json_model.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Json_model.m; sourceTree = "<group>"; };
+		E391E3331FEB4F79003FF555 /* ShareSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareSearchViewController.h; sourceTree = "<group>"; };
+		E391E3341FEB4F7A003FF555 /* ShareSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareSearchViewController.m; sourceTree = "<group>"; };
+		E391E3371FEB633B003FF555 /* SearchResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchResultViewController.h; sourceTree = "<group>"; };
+		E391E3381FEB633B003FF555 /* SearchResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchResultViewController.m; sourceTree = "<group>"; };
+		E391E33A1FEB9A12003FF555 /* 22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 22.png; sourceTree = "<group>"; };
+		E391E33C1FEB9A21003FF555 /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
+		E391E33E1FEBA015003FF555 /* 33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 33.png; sourceTree = "<group>"; };
+		E391E3401FEBA268003FF555 /* YHUIButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHUIButton.h; sourceTree = "<group>"; };
+		E391E3411FEBA268003FF555 /* YHUIButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHUIButton.m; sourceTree = "<group>"; };
+		E391E3431FEBCC14003FF555 /* 001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 001.png; sourceTree = "<group>"; };
 		E3F1CA801FE387B500AEA043 /* JXButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXButton.m; sourceTree = "<group>"; };
 		E3F1CA811FE387B600AEA043 /* JXButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXButton.h; sourceTree = "<group>"; };
 		E3F1CA861FE3AAD100AEA043 /* MeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeTableViewCell.h; sourceTree = "<group>"; };
@@ -379,6 +393,8 @@
 		E32B10471FE2439400A98135 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E391E3361FEB5E49003FF555 /* searchResultController */,
+				E391E3321FEB4F38003FF555 /* searchController */,
 				E36B34F01FEA17A400B7B31C /* 首页 */,
 			);
 			path = Controller;
@@ -483,6 +499,10 @@
 		E36B34A91FE5F4B400B7B31C /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				E391E3431FEBCC14003FF555 /* 001.png */,
+				E391E33E1FEBA015003FF555 /* 33.png */,
+				E391E33A1FEB9A12003FF555 /* 22.png */,
+				E391E33C1FEB9A21003FF555 /* 11.png */,
 				E36B34E11FE928A800B7B31C /* 5.png */,
 				E36B34E21FE928AD00B7B31C /* 4.png */,
 				E36B34E01FE928A300B7B31C /* 1.png */,
@@ -507,10 +527,10 @@
 		E36B34C01FE78FB900B7B31C /* Button */ = {
 			isa = PBXGroup;
 			children = (
-				E36B34C61FE7B05F00B7B31C /* LRGlowingButton.h */,
-				E36B34C71FE7B05F00B7B31C /* LRGlowingButton.m */,
 				E36B34C21FE78FCC00B7B31C /* UIButton+NMCategory.h */,
 				E36B34C11FE78FCC00B7B31C /* UIButton+NMCategory.m */,
+				E391E3401FEBA268003FF555 /* YHUIButton.h */,
+				E391E3411FEBA268003FF555 /* YHUIButton.m */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -558,6 +578,24 @@
 				E391E31D1FEA498B003FF555 /* AFURLSessionManager.m */,
 			);
 			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		E391E3321FEB4F38003FF555 /* searchController */ = {
+			isa = PBXGroup;
+			children = (
+				E391E3331FEB4F79003FF555 /* ShareSearchViewController.h */,
+				E391E3341FEB4F7A003FF555 /* ShareSearchViewController.m */,
+			);
+			path = searchController;
+			sourceTree = "<group>";
+		};
+		E391E3361FEB5E49003FF555 /* searchResultController */ = {
+			isa = PBXGroup;
+			children = (
+				E391E3371FEB633B003FF555 /* SearchResultViewController.h */,
+				E391E3381FEB633B003FF555 /* SearchResultViewController.m */,
+			);
+			path = searchResultController;
 			sourceTree = "<group>";
 		};
 		E488F6356803590B14296A8D /* Frameworks */ = {
@@ -638,14 +676,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E391E33B1FEB9A13003FF555 /* 22.png in Resources */,
 				E36B34E51FE928AD00B7B31C /* 1.png in Resources */,
 				E36B34AD1FE5F60500B7B31C /* Back_image.png in Resources */,
 				E36B34E31FE928AD00B7B31C /* 3.png in Resources */,
 				E32B10161FE2169900A98135 /* Podfile in Resources */,
+				E391E33D1FEB9A21003FF555 /* 11.png in Resources */,
 				E36B34E41FE928AD00B7B31C /* 2.png in Resources */,
 				E36B34D21FE7D06F00B7B31C /* MineTableViewCell.xib in Resources */,
 				E36B34E71FE928AD00B7B31C /* 4.png in Resources */,
 				E32B10631FE26FEF00A98135 /* Assets.xcassets in Resources */,
+				E391E33F1FEBA016003FF555 /* 33.png in Resources */,
+				E391E3441FEBCC14003FF555 /* 001.png in Resources */,
 				E36B34E61FE928AD00B7B31C /* 5.png in Resources */,
 				E36B34D41FE8DEBD00B7B31C /* tuli.png in Resources */,
 				E32B0FFF1FE2119600A98135 /* LaunchScreen.storyboard in Resources */,
@@ -725,12 +767,15 @@
 				E36B34C31FE78FCC00B7B31C /* UIButton+NMCategory.m in Sources */,
 				E391E3261FEA498B003FF555 /* AFURLSessionManager.m in Sources */,
 				E32B105E1FE2491D00A98135 /* DHMineViewController.m in Sources */,
+				E391E3421FEBA268003FF555 /* YHUIButton.m in Sources */,
 				E32B10361FE21A5800A98135 /* YHTabBar.m in Sources */,
+				E391E3391FEB633B003FF555 /* SearchResultViewController.m in Sources */,
 				E32B10191FE2177400A98135 /* BaseUINavigationController.m in Sources */,
 				E36B34EA1FE9377B00B7B31C /* midButton.m in Sources */,
 				E32B10581FE248D400A98135 /* DHFindHouserViewController.m in Sources */,
 				E32B10021FE2119600A98135 /* main.m in Sources */,
 				E32B0FF41FE2119600A98135 /* AppDelegate.m in Sources */,
+				E391E3351FEB4F7A003FF555 /* ShareSearchViewController.m in Sources */,
 				E32B103F1FE21CC500A98135 /* AppDelegate+AppSever.m in Sources */,
 				E391E3251FEA498B003FF555 /* AFURLResponseSerialization.m in Sources */,
 				E32B10261FE2180100A98135 /* NSString+Base64.m in Sources */,
@@ -742,7 +787,6 @@
 				E32B10611FE249FE00A98135 /* DHHomeViewController.m in Sources */,
 				E391E3311FEAA48B003FF555 /* Json_model.m in Sources */,
 				E36B34B91FE7885D00B7B31C /* NSArray+log.m in Sources */,
-				E36B34C81FE7B06000B7B31C /* LRGlowingButton.m in Sources */,
 				E391E32B1FEA4A04003FF555 /* NetworkSingleton.m in Sources */,
 				E391E3241FEA498B003FF555 /* AFURLRequestSerialization.m in Sources */,
 				E391E3221FEA498B003FF555 /* AFSecurityPolicy.m in Sources */,

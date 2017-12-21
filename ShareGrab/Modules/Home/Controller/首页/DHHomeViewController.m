@@ -12,6 +12,7 @@
 #import "UIButton+NMCategory.h"
 #import "homeMidView.h"
 #import "NetworkSingleton.h"
+#import "ShareSearchViewController.h"
 
 #define  YHHeaderHeight   (260*Iphone6ScaleWidth+YHStatusBarHeight)
 #define  HeadScroViewH    (YHScreen_H - YHTabBarHeight)*0.23
@@ -104,7 +105,7 @@
     [conterView addSubview:titleLabel];
     [conterView addSubview:line];
     self.navigationItem.titleView = conterView;
-
+      [self addUI];
      [self getRequset];
    
 }
@@ -154,7 +155,7 @@
             
         }
         
-        [self addUI];
+        [self.view setNeedsLayout];
     }
                                           failed:^(NSError *error)
      {
@@ -292,7 +293,9 @@
 #pragma mark ********************搜索
 
 - (void)tapView{
-    
+    ShareSearchViewController *vc = [[ShareSearchViewController alloc]init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
     YHLog(@"点击");
 }
 //
