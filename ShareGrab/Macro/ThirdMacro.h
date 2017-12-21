@@ -9,14 +9,14 @@
 #ifndef ThirdMacro_h
 #define ThirdMacro_h
 
-/ 友盟统计
+//友盟统计
 #define UMengKey
 
 //微信
 #define kAppKey_Wechat
 #define kSecret_Wechat
 //高德
-#define gaodeKey    @"1a4d4290547ab065d020f0ea486de241"
+#define gaodeKey    @"9bfefd58507caa2e84a84635ce6db5c0"
 // 腾讯
 #define kAppKey_Tencent          
 #endif /* ThirdMacro_h */

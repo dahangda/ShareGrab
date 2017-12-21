@@ -41,6 +41,8 @@
  输出*/
 #ifdef DEBUG
 #define YHLog(...) NSLog(__VA_ARGS__)
+//专门输出请求返回值的宏
+#define DHResponseBodyLog(responseBody) DLog(@"\nresponseBody:%@", responseBody)
 #else
 #define YHLog(...)
 #endif
@@ -128,7 +130,7 @@ return shared##className; \
 //通知的发送
 
 #define YHPostNotification(name,obj) [[NSNotificationCenter defaultCenter] postNotificationName:name object:obj];
-
+//字符串拼接宏
 /*用户相关的
  */
 

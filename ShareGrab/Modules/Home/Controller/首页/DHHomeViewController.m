@@ -11,17 +11,27 @@
 #import "SDCycleScrollView.h"
 #import "UIButton+NMCategory.h"
 #import "homeMidView.h"
+#import "NetworkSingleton.h"
 
 #define  YHHeaderHeight   (260*Iphone6ScaleWidth+YHStatusBarHeight)
 #define  HeadScroViewH    (YHScreen_H - YHTabBarHeight)*0.23
 #define  midViewH         (YHScreen_H - YHTabBarHeight)*0.18
 @interface DHHomeViewController()<UITableViewDelegate,UITableViewDataSource,SDCycleScrollViewDelegate>
-
+/*1.table数据
+  2.中间控件数据
+   3.轮播图数据
+   4.（总数据）
+   5.tabbar数据
+ */
 @property(nonatomic,copy) NSMutableArray *dataSource;
 @property(nonatomic,copy) NSMutableArray  *midData;
+@property(nonatomic,copy) NSMutableArray  *headData;
+@property(nonatomic,strong) NSMutableArray  *headDatainfo;
+@property(nonatomic,copy) NSMutableArray  *menuData;
 @end
 
 @implementation DHHomeViewController
+
 
 - (NSMutableArray *)dataSource{
     if (_dataSource == nil) {
@@ -32,27 +42,16 @@
                                    @"colorText":@"黄色",
                                    @"prudentTimeLblText":@"一年",
                                    @"addressLblText":@"北京市石景山区苹果园一号院"
+                                 ,@"pricedayLblText":@"308"
                                    };
-        
-        
-         _dataSource = [@[myGrab,myGrab,myGrab,myGrab,myGrab,myGrab,myGrab,myGrab] copy];
+
+
+         _dataSource = [@[myGrab,myGrab,myGrab,myGrab,myGrab,myGrab,myGrab,myGrab] mutableCopy];
     }
-    
+
     return _dataSource;
+
 }
-
-- (NSMutableArray *)midData{
-    if (_midData == Nil) {
-        NSDictionary *mid = @{@"button_icon":@"tuli",
-                              @"button_text":@"手机"};
-                              _midData = [@[mid,mid,mid] copy] ;
-    
-    }
-    return _midData;
-}
-
-
-
 
 
 
@@ -89,7 +88,7 @@
     titleLabel.textAlignment = UITextAlignmentCenter;
                                                                 ;
     titleLabel.textColor = YHRGBColor(255, 255, 255);                                                      ;
-    titleLabel.font  = [UIFont systemFontOfSize:12]                                           ;
+    titleLabel.font  = [UIFont systemFontOfSize:14]                                           ;
    
     
     UIView *line = [[UIView alloc]initWithFrame:CGRectMake(0, 25, 250, 1)];
@@ -105,21 +104,71 @@
     [conterView addSubview:titleLabel];
     [conterView addSubview:line];
     self.navigationItem.titleView = conterView;
-    
-  
-  [self addUI];
-  
-    
+
+     [self getRequset];
    
 }
+
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+}
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    //    self.navigationController.delegate = self.navigationController;
+}
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    //    [self ysl_removeTransitionDelegate];
+}
+
+#pragma mark ********************网络加载
+
+-(void) getRequset
+{
+    NSDictionary *parameters = @{
+                                 @"ECID":ECID,
+                                 @"AppID":APPID,
+                                 @"AppType":@"2",
+                                 @"Lat":@"39.871824",
+                                 @"Lng":@"115.850858",
+                                 
+                                 };
+    [[NetworkSingleton shareManager] httpRequest:parameters url: URL_user_home success:^(id responseBody){
+
+    
+    
+        self.headData = responseBody[@"CarouselList"];
+        NSLog(@"%@",responseBody);
+                 self.headDatainfo = [NSMutableArray new];
+        
+        NSLog(@"%@",responseBody[@"Notice"]);
+        
+        for (NSUInteger i = 0; i<self.headData.count; i++) {
+
+            NSString *sting;
+            sting = self.headData[i][@"PicFileID"];
+            [_headDatainfo addObject:sting];
+            NSLog(@"%@",sting);
+            
+        }
+        
+        [self addUI];
+    }
+                                          failed:^(NSError *error)
+     {
+         NSLog(@"%@", error);
+     }];
+}
+
+
 
 #pragma mark ********************添加轮播图，中间view，tabview。
 
 - (void)addUI{
     
-
-    
-    
+    // table控件
     self.tableView.height = YHScreen_H - YHTabBarHeight;
     self.tableView.contentInset = UIEdgeInsetsMake(HeadScroViewH+midViewH, 0, 30, 0);
     self.tableView.mj_footer.hidden = YES;
@@ -130,23 +179,18 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"MineTableViewCell" bundle:nil] forCellReuseIdentifier:@"MineTableViewCell"];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+
     
-//    self.tableView.rowHeight = UITableViewAutomaticDimension;
-//    // 设置tableView的估算高度
-//    self.tableView.estimatedRowHeight = 200;
-    
-    
+    //轮播控件
     SDCycleScrollView *headScroView= [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, -(HeadScroViewH+midViewH),  YHScreenWidth,HeadScroViewH) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
-    //headScroView  = SDCycleScrollViewPageContolAlimentRight;
-    headScroView.imageURLStringsGroup = @[
-                                           @"https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a4b3d7085dee3d6d2293d48b252b5910/0e2442a7d933c89524cd5cd4d51373f0830200ea.jpg",
-                                           @"https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a41eb338dd33c895a62bcb3bb72e47c2/5fdf8db1cb134954a2192ccb524e9258d1094a1e.jpg",
-                                           @"http://c.hiphotos.baidu.com/image/w%3D400/sign=c2318ff84334970a4773112fa5c8d1c0/b7fd5266d0160924c1fae5ccd60735fae7cd340d.jpg",@"http://c.hiphotos.baidu.com/image/w%3D400/sign=c2318ff84334970a4773112fa5c8d1c0/b7fd5266d0160924c1fae5ccd60735fae7cd340d.jpg"
-                                           ];
+
+
+    //轮播图给数据
+    headScroView.imageURLStringsGroup = self.headDatainfo;
     headScroView.titlesGroup = nil;
     headScroView.currentPageDotColor = [UIColor whiteColor]; // 自定义分页控件小圆标颜色
     headScroView.backgroundColor = [UIColor blueColor];
-    
+    //中间控件
     homeMidView *midView = [[homeMidView alloc]initWithFrame:CGRectMake(0, -midViewH, YHScreenWidth, midViewH) ];
     midView.backgroundColor = [UIColor whiteColor];
     
@@ -170,10 +214,6 @@
     
      [self.tableView addSubview:headScroView];
     [self.tableView  addSubview:midView];
-    
-    //    UIImageView *backGroudView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Back_image"]];
-    //    backGroudView.frame = CGRectMake(0, 80, YHScreen_H, HeadScroViewH);
-    //    self.tableView.backgroundView = backGroudView;
     
     self.tableView.backgroundView.frame = CGRectMake(0, 80, YHScreen_H, HeadScroViewH);
     [self.view addSubview:self.tableView];
@@ -211,12 +251,11 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
    
   return  self.dataSource.count;
-    YHLog(@"%d",self.dataSource.count);
 }
 
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return YHScreenHeight*0.18 ;
+    return YHScreenHeight*0.2 ;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

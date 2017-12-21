@@ -82,7 +82,7 @@
 
 #pragma mark ********************定位
 - (void)userLocation{
-     [AMapServices sharedServices].apiKey = @"9bfefd58507caa2e84a84635ce6db5c0";
+     [AMapServices sharedServices].apiKey = gaodeKey;
  AMapLocationManager * locationManger = [[AMapLocationManager alloc] init];
     self.manager  = locationManger;
     locationManger.delegate = self;

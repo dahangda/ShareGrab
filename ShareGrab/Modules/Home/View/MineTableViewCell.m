@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *distance;
 @property (weak, nonatomic) IBOutlet UILabel *addressLable;
 @property (weak, nonatomic) IBOutlet UILabel *productTimeLable;
+@property (weak, nonatomic) IBOutlet UILabel *daypriceLable;
+
 
 
 
@@ -56,6 +58,10 @@
     
     NSString *address = [NSString stringWithFormat:@"地址：%@", _cellData[@"addressLblText"]];
     self.addressLable.text = address;
+    NSString *price = [NSString stringWithFormat:@"%@元/天",_cellData[@"pricedayLblText"]];
+    self.daypriceLable.text = price;
+    
+    
 }
 
 - (void)awakeFromNib {

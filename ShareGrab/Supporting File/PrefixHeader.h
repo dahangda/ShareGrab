@@ -12,6 +12,8 @@
  */
 #import "AppDelegate+AppSever.h"
 #import "YHMacro.h"
+#import "URLMacro.h"
+#import "ThirdMacro.h"
 #import "UIView+Frame.h"
 #import "BaseViewController.h"
 
