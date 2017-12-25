@@ -25,6 +25,7 @@
 #import "MJRefresh.h"
 #import "YYKit.h"
 #import "SDCycleScrollView.h"
+#import "MJExtension.h"
 /*地图定位
  */
 #import <AMapSearchKit/AMapSearchKit.h>

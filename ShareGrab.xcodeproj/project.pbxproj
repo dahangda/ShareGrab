@@ -57,6 +57,10 @@
 		E391E33F1FEBA016003FF555 /* 33.png in Resources */ = {isa = PBXBuildFile; fileRef = E391E33E1FEBA015003FF555 /* 33.png */; };
 		E391E3421FEBA268003FF555 /* YHUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E391E3411FEBA268003FF555 /* YHUIButton.m */; };
 		E391E3441FEBCC14003FF555 /* 001.png in Resources */ = {isa = PBXBuildFile; fileRef = E391E3431FEBCC14003FF555 /* 001.png */; };
+		E391E3471FF0C29D003FF555 /* HomeListDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = E391E3461FF0C29C003FF555 /* HomeListDetail.m */; };
+		E391E34A1FF0C2BE003FF555 /* GoodListDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = E391E3491FF0C2BE003FF555 /* GoodListDetail.m */; };
+		E391E34D1FF0C2FA003FF555 /* carourelListDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = E391E34C1FF0C2FA003FF555 /* carourelListDetail.m */; };
+		E391E3511FF0EB08003FF555 /* WKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E391E3501FF0EB08003FF555 /* WKViewController.m */; };
 		E3F1CA821FE387B600AEA043 /* JXButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F1CA801FE387B500AEA043 /* JXButton.m */; };
 		E3F1CA881FE3AAD100AEA043 /* MeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F1CA871FE3AAD100AEA043 /* MeTableViewCell.m */; };
 		E6DB59EED86B596D8580B150 /* libPods-ShareGrab.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A7754D3D97B201DC52AC384 /* libPods-ShareGrab.a */; };
@@ -157,6 +161,14 @@
 		E391E3401FEBA268003FF555 /* YHUIButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHUIButton.h; sourceTree = "<group>"; };
 		E391E3411FEBA268003FF555 /* YHUIButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHUIButton.m; sourceTree = "<group>"; };
 		E391E3431FEBCC14003FF555 /* 001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 001.png; sourceTree = "<group>"; };
+		E391E3451FF0C29C003FF555 /* HomeListDetail.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeListDetail.h; sourceTree = "<group>"; };
+		E391E3461FF0C29C003FF555 /* HomeListDetail.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeListDetail.m; sourceTree = "<group>"; };
+		E391E3481FF0C2BE003FF555 /* GoodListDetail.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoodListDetail.h; sourceTree = "<group>"; };
+		E391E3491FF0C2BE003FF555 /* GoodListDetail.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoodListDetail.m; sourceTree = "<group>"; };
+		E391E34B1FF0C2FA003FF555 /* carourelListDetail.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = carourelListDetail.h; sourceTree = "<group>"; };
+		E391E34C1FF0C2FA003FF555 /* carourelListDetail.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = carourelListDetail.m; sourceTree = "<group>"; };
+		E391E34F1FF0EB08003FF555 /* WKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKViewController.h; sourceTree = "<group>"; };
+		E391E3501FF0EB08003FF555 /* WKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKViewController.m; sourceTree = "<group>"; };
 		E3F1CA801FE387B500AEA043 /* JXButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXButton.m; sourceTree = "<group>"; };
 		E3F1CA811FE387B600AEA043 /* JXButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXButton.h; sourceTree = "<group>"; };
 		E3F1CA861FE3AAD100AEA043 /* MeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeTableViewCell.h; sourceTree = "<group>"; };
@@ -393,6 +405,7 @@
 		E32B10471FE2439400A98135 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E391E34E1FF0EADB003FF555 /* webTestController */,
 				E391E3361FEB5E49003FF555 /* searchResultController */,
 				E391E3321FEB4F38003FF555 /* searchController */,
 				E36B34F01FEA17A400B7B31C /* 首页 */,
@@ -423,6 +436,12 @@
 			children = (
 				E391E32F1FEAA48B003FF555 /* Json_model.h */,
 				E391E3301FEAA48B003FF555 /* Json_model.m */,
+				E391E3451FF0C29C003FF555 /* HomeListDetail.h */,
+				E391E3461FF0C29C003FF555 /* HomeListDetail.m */,
+				E391E3481FF0C2BE003FF555 /* GoodListDetail.h */,
+				E391E3491FF0C2BE003FF555 /* GoodListDetail.m */,
+				E391E34B1FF0C2FA003FF555 /* carourelListDetail.h */,
+				E391E34C1FF0C2FA003FF555 /* carourelListDetail.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -598,6 +617,15 @@
 			path = searchResultController;
 			sourceTree = "<group>";
 		};
+		E391E34E1FF0EADB003FF555 /* webTestController */ = {
+			isa = PBXGroup;
+			children = (
+				E391E34F1FF0EB08003FF555 /* WKViewController.h */,
+				E391E3501FF0EB08003FF555 /* WKViewController.m */,
+			);
+			path = webTestController;
+			sourceTree = "<group>";
+		};
 		E488F6356803590B14296A8D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -766,6 +794,7 @@
 				E32B10421FE2278E00A98135 /* BaseViewController.m in Sources */,
 				E36B34C31FE78FCC00B7B31C /* UIButton+NMCategory.m in Sources */,
 				E391E3261FEA498B003FF555 /* AFURLSessionManager.m in Sources */,
+				E391E34A1FF0C2BE003FF555 /* GoodListDetail.m in Sources */,
 				E32B105E1FE2491D00A98135 /* DHMineViewController.m in Sources */,
 				E391E3421FEBA268003FF555 /* YHUIButton.m in Sources */,
 				E32B10361FE21A5800A98135 /* YHTabBar.m in Sources */,
@@ -785,6 +814,8 @@
 				E391E31F1FEA498B003FF555 /* AFHTTPRequestOperationManager.m in Sources */,
 				E36B34DD1FE915DD00B7B31C /* homeMidView.m in Sources */,
 				E32B10611FE249FE00A98135 /* DHHomeViewController.m in Sources */,
+				E391E3471FF0C29D003FF555 /* HomeListDetail.m in Sources */,
+				E391E3511FF0EB08003FF555 /* WKViewController.m in Sources */,
 				E391E3311FEAA48B003FF555 /* Json_model.m in Sources */,
 				E36B34B91FE7885D00B7B31C /* NSArray+log.m in Sources */,
 				E391E32B1FEA4A04003FF555 /* NetworkSingleton.m in Sources */,
@@ -793,6 +824,7 @@
 				E391E3201FEA498B003FF555 /* AFHTTPSessionManager.m in Sources */,
 				E32B10341FE21A5800A98135 /* YHTabBarViewController.m in Sources */,
 				E3F1CA881FE3AAD100AEA043 /* MeTableViewCell.m in Sources */,
+				E391E34D1FF0C2FA003FF555 /* carourelListDetail.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

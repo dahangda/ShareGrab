@@ -114,5 +114,30 @@
 + (AppDelegate *)shareAppDelegate{
     return (AppDelegate *)[[UIApplication sharedApplication] delegate];
 }
+
+
+
+
+
+-(UIViewController *)getCurrentUIVC
+{
+    UIViewController  *superVC = [self getCurrentVC];
+    
+    if ([superVC isKindOfClass:[UITabBarController class]]) {
+        
+        UIViewController  *tabSelectVC = ((UITabBarController*)superVC).selectedViewController;
+        
+        if ([tabSelectVC isKindOfClass:[UINavigationController class]]) {
+            
+            return ((UINavigationController*)tabSelectVC).viewControllers.lastObject;
+        }
+        return tabSelectVC;
+    }else
+        if ([superVC isKindOfClass:[UINavigationController class]]) {
+            
+            return ((UINavigationController*)superVC).viewControllers.lastObject;
+        }
+    return superVC;
+}
 @end
 

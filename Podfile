@@ -10,4 +10,5 @@ pod 'AMapFoundation'
 pod 'AMapLocation'
 pod 'AMapSearch'
 pod 'AMap2DMap'
+pod 'MJExtension'
 end

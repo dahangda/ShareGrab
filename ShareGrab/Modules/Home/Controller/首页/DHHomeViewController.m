@@ -13,46 +13,55 @@
 #import "homeMidView.h"
 #import "NetworkSingleton.h"
 #import "ShareSearchViewController.h"
-
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "HomeListDetail.h"
+#import "GoodListDetail.h"
 #define  YHHeaderHeight   (260*Iphone6ScaleWidth+YHStatusBarHeight)
 #define  HeadScroViewH    (YHScreen_H - YHTabBarHeight)*0.23
 #define  midViewH         (YHScreen_H - YHTabBarHeight)*0.18
 @interface DHHomeViewController()<UITableViewDelegate,UITableViewDataSource,SDCycleScrollViewDelegate>
 /*1.table数据
   2.中间控件数据
-   3.轮播图数据
-   4.（总数据）
+  3.轮播图数据
+4.（总数据）
    5.tabbar数据
  */
-@property(nonatomic,copy) NSMutableArray *dataSource;
+@property(nonatomic,copy) NSMutableArray  *dataSource;
+@property(nonatomic,strong)NSMutableArray * dataSourceinfo;
 @property(nonatomic,copy) NSMutableArray  *midData;
+@property(nonatomic,copy) NSMutableArray  *midDatainfo;
 @property(nonatomic,copy) NSMutableArray  *headData;
 @property(nonatomic,strong) NSMutableArray  *headDatainfo;
 @property(nonatomic,copy) NSMutableArray  *menuData;
+
+/** headView **/
+@property(nonatomic,strong) SDCycleScrollView * headView;
+/** midView **/
+@property(nonatomic,strong) homeMidView * midView;
 @end
 
 @implementation DHHomeViewController
 
 
-- (NSMutableArray *)dataSource{
-    if (_dataSource == nil) {
-        NSDictionary *myGrab = @{@"title_icon":@"tuli",
-                                   @"titleText":@"我的挖掘机",
-                                   @"distanceText":@"10km",
-                                   @"oldText":@"九成新",
-                                   @"colorText":@"黄色",
-                                   @"prudentTimeLblText":@"一年",
-                                   @"addressLblText":@"北京市石景山区苹果园一号院"
-                                 ,@"pricedayLblText":@"308"
-                                   };
-
-
-         _dataSource = [@[myGrab,myGrab,myGrab,myGrab,myGrab,myGrab,myGrab,myGrab] mutableCopy];
-    }
-
-    return _dataSource;
-
-}
+//- (NSMutableArray *)dataSource{
+//    if (_dataSource == nil) {
+//        NSDictionary *myGrab = @{@"title_icon":@"tuli",
+//                                   @"titleText":@"我的挖掘机",
+//                                   @"distanceText":@"10km",
+//                                   @"oldText":@"九成新",
+//                                   @"colorText":@"黄色",
+//                                   @"prudentTimeLblText":@"一年",
+//                                   @"addressLblText":@"北京市石景山区苹果园一号院"
+//                                 ,@"pricedayLblText":@"308"
+//                                   };
+//
+//
+//         _dataSource = [@[myGrab,myGrab,myGrab,myGrab,myGrab,myGrab,myGrab,myGrab] mutableCopy];
+//    }
+//
+//    return _dataSource;
+//
+//}
 
 
 
@@ -124,43 +133,82 @@
     //    [self ysl_removeTransitionDelegate];
 }
 
-#pragma mark ********************网络加载
+#pragma mark ********************网络加载数据在主线程刷新
 
 -(void) getRequset
+
 {
-    NSDictionary *parameters = @{
-                                 @"ECID":ECID,
-                                 @"AppID":APPID,
-                                 @"AppType":@"2",
-                                 @"Lat":@"39.871824",
-                                 @"Lng":@"115.850858",
-                                 
-                                 };
-    [[NetworkSingleton shareManager] httpRequest:parameters url: URL_user_home success:^(id responseBody){
-
     
-    
-        self.headData = responseBody[@"CarouselList"];
-        NSLog(@"%@",responseBody);
-                 self.headDatainfo = [NSMutableArray new];
-        
-        NSLog(@"%@",responseBody[@"Notice"]);
-        
-        for (NSUInteger i = 0; i<self.headData.count; i++) {
-
-            NSString *sting;
-            sting = self.headData[i][@"PicFileID"];
-            [_headDatainfo addObject:sting];
-            NSLog(@"%@",sting);
+        NSDictionary *parameters = @{
+                                     @"ECID":ECID,
+                                     @"AppID":APPID,
+                                     @"AppType":@"2",
+                                     @"Lat":@"39.871824",
+                                     @"Lng":@"115.850858",
+                                     
+                                     };
+        [[NetworkSingleton shareManager] httpRequest:parameters url: URL_user_home success:^(id responseBody){
             
-        }
+            self.headData = responseBody[@"CarouselList"];
+         
+            
+            NSLog(@"%@",responseBody);
+            self.headDatainfo = [NSMutableArray new];
+            NSLog(@"%@",responseBody[@"Notice"]);
+    
+            
+
+            NSMutableArray *picUrls = [NSMutableArray new];
+            for (NSInteger i = 0; i < self.headDatainfo.count; i ++ ) {
+                [picUrls addObject: [NSURL URLWithString: self.headDatainfo[i]]];
+            }
+            
+            
+//            self.headView.imageURLStringsGroup = picUrls;
+            NSString *string = @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514183463576&di=c7d57d7604583966b364cb247b9cee82&imgtype=0&src=http%3A%2F%2Fh.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F95eef01f3a292df57fe17706b6315c6034a87387.jpg";
+            self.headView.imageURLStringsGroup = @[string,string,string];
+            
+            self.headView.titlesGroup = nil;
+            self.headView.currentPageDotColor = [UIColor whiteColor]; // 自定义分页控件小圆标颜色
+            self.headView.backgroundColor = [UIColor blueColor];
+#pragma mark ********************midView数据
+
+               self.midData  = responseBody[@"HomeList"];
+            NSMutableArray *homeListDTs = [NSMutableArray array];
+            for (NSUInteger i = 0; i < self.midData.count; i++) {
+                HomeListDetail *homeListDT =  [HomeListDetail mj_objectWithKeyValues:self.midData[i] ];
+                [homeListDTs addObject:homeListDT];
+                
+            }
+            self.midView.midViewDatas = homeListDTs;
+#pragma mark ********************table数据
+            self.dataSource = responseBody[@"GoodsList"];
+            NSMutableArray *GoodsListDTs = [NSMutableArray array];
+            for (NSUInteger i = 0; i < self.dataSource.count; i++) {
+                GoodListDetail *GoodsListDT =  [GoodListDetail mj_objectWithKeyValues:self.dataSource[i] ];
+                [GoodsListDTs addObject:GoodsListDT];
+                
+            }
+            
+
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                
+                
+                                 [self.tableView reloadData];
+            });
+            
+        }failed:^(NSError *error)
+         {
+             NSLog(@"%@", error);
+         }];
         
-        [self.view setNeedsLayout];
-    }
-                                          failed:^(NSError *error)
-     {
-         NSLog(@"%@", error);
-     }];
+    
+        
+    
+    
+    
+    
 }
 
 
@@ -183,43 +231,24 @@
 
     
     //轮播控件
-    SDCycleScrollView *headScroView= [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, -(HeadScroViewH+midViewH),  YHScreenWidth,HeadScroViewH) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    self.headView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, -(HeadScroViewH+midViewH),  YHScreenWidth,HeadScroViewH) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
 
 
-    //轮播图给数据
-    headScroView.imageURLStringsGroup = self.headDatainfo;
-    headScroView.titlesGroup = nil;
-    headScroView.currentPageDotColor = [UIColor whiteColor]; // 自定义分页控件小圆标颜色
-    headScroView.backgroundColor = [UIColor blueColor];
+    
     //中间控件
-    homeMidView *midView = [[homeMidView alloc]initWithFrame:CGRectMake(0, -midViewH, YHScreenWidth, midViewH) ];
-    midView.backgroundColor = [UIColor whiteColor];
-    
-    midView.midViewDatas = [@[@{@"1":@"1",
-                                @"11":@"手机"
-                                },
-                            @{@"2":@"2",
-                              @"22":@"单车"
-                              },
-                            @{@"3":@"3",
-                              @"33":@"衣服"
-                              },
-                            @{@"4":@"4",
-                              @"44":@"房屋"
-                              },
-                            @{@"5":@"5",
-                              @"55":@"汽车"
-                              }] copy];
+   self.midView = [[homeMidView alloc]initWithFrame:CGRectMake(0, -midViewH, YHScreenWidth, midViewH) ];
+    _midView.backgroundColor = [UIColor whiteColor];
     
     
     
-     [self.tableView addSubview:headScroView];
-    [self.tableView  addSubview:midView];
+    
+    
+     [self.tableView addSubview:_headView];
+    [self.tableView  addSubview:_midView];
     
     self.tableView.backgroundView.frame = CGRectMake(0, 80, YHScreen_H, HeadScroViewH);
     [self.view addSubview:self.tableView];
-  
-    [self.tableView reloadData];
+
 #pragma mark ********************添加悬浮加入我们按钮
 
     UIButton *btn = [[UIButton alloc] init];
@@ -238,7 +267,12 @@
         make.centerY.mas_equalTo(YHScreen_H*0.23);
     }];
 }
+#pragma mark ********************轮播图点击
 
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index;
+{
+    YHLog(@"%lu",index);
+}
 
 -(void)showTag:(UIButton *)sender
 {

@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "GoodListDetail.h"
 @interface MineTableViewCell : UITableViewCell
 
 //cell 展示内容
-@property (nonatomic,copy) NSDictionary * cellData;
+@property (nonatomic,copy) GoodListDetail * cellData;
 @end
