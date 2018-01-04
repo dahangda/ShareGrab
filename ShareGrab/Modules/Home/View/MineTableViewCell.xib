@@ -65,7 +65,7 @@
                         <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33l-jW-PZh" userLabel="地址">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33l-jW-PZh" userLabel="地址">
                         <rect key="frame" x="130" y="83.5" width="266" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="h3W-Oo-iC0"/>
@@ -74,10 +74,9 @@
                         <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdc-Ne-4Hm" userLabel="生产日期">
-                        <rect key="frame" x="260" y="58" width="40" height="20.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdc-Ne-4Hm" userLabel="生产日期">
+                        <rect key="frame" x="260" y="58" width="37.5" height="20.5"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="40" id="BdB-y4-T97"/>
                             <constraint firstAttribute="height" constant="20" id="s1I-t4-Bwl"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -141,7 +140,7 @@
                 <outlet property="titleImageView" destination="dhD-ee-PkD" id="Ha6-V8-V2Y"/>
                 <outlet property="titleLable" destination="fLf-UT-FYO" id="deH-o6-QHs"/>
             </connections>
-            <point key="canvasLocation" x="96" y="56.5"/>
+            <point key="canvasLocation" x="-132" y="62"/>
         </tableViewCell>
     </objects>
 </document>

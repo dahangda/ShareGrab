@@ -30,79 +30,82 @@
         _cellData = cellData;
     }
    
-//    self.titleImageView.image  = [UIImage imageNamed:_cellData[@"title_icon"]];
-    //cellData.GoodsPic
-    [self.titleImageView  sd_setImageWithURL:[NSURL URLWithString:@"https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3529824170,3396303915&fm=27&gp=0.jpg"]];
+    [self.titleImageView  sd_setImageWithURL:[NSURL URLWithString:cellData.GoodsPic]];
+    
+    YHLog(@"%@",_cellData.GoodsName);
+    self.titleLable.text =[_cellData.GoodsName mutableCopy];
     
     
-//    self.titleLable.text =_cellData.GoodsName;
-    self.titleLable.text = @"公寓";
+   self.distance.text = [NSString stringWithFormat:@"%@km",cellData.Distance];
+
     
-//    self.distance.text = _cellData.Distance;
-    self.distance.text = @"2KM";
+
+
+
+   YHLog(@"=======%@",cellData.LabelContent);
+#pragma mark ********************contentlable 颜色设置
+
+    self.oldLable.layer.cornerRadius = 4;
+    self.oldLable.layer.masksToBounds = YES;
+    self.oldLable.layer.borderColor = YHRGBColor(25, 148, 252).CGColor;
+    self.oldLable.layer.borderWidth = 1;
     
-   // NSString *string = [_cellData.LabelContent copy];
-    NSString *string = @"卫生,干净;大小,大;";
-//    NSArray *arr = [NSArray new];
-//    YHLog(@"=======%@",cellData.LabelContent);
-   NSArray *arr = [string componentsSeparatedByString:@";"];
+    self.colorLable.layer.cornerRadius = 4;
+    self.colorLable.layer.masksToBounds = YES;
+    self.colorLable.layer.borderColor = YHRGBColor(25, 148, 252).CGColor;
+    self.colorLable.layer.borderWidth = 1;
     
-    for (NSUInteger i = 0; i < arr.count - 1; i ++) {
+    self.productTimeLable.layer.cornerRadius = 4;
+    self.productTimeLable.layer.masksToBounds = YES;
+    self.productTimeLable.layer.borderColor = YHRGBColor(25, 148, 252).CGColor;
+    self.productTimeLable.layer.borderWidth = 1;
+    
+    
+   NSArray *arr1 = [cellData.LabelContent componentsSeparatedByString:@";"];
+    YHLog(@"%lu",arr1.count);
+    if (arr1.count == 2) {
+        self.colorLable.hidden = YES;
+        self.productTimeLable.hidden = YES;
+    }
+    if(arr1.count == 3){
+        self.productTimeLable.hidden = YES;
+    }
+    
+    for (NSUInteger i = 0; i < arr1.count ; i ++) {
         if (i == 0) {
-            NSString *string1 = arr[i];
+            NSString *string1 = arr1[0];
             NSArray * arr1 = [string1 componentsSeparatedByString:@","];
             self.oldLable.text = arr1[1];
         }
         if (i == 1) {
-            NSString *string1 = arr[i];
+          
+            NSString *string1 = arr1[1];
             NSArray * arr1 = [string1 componentsSeparatedByString:@","];
-            self.colorLable.text = arr1[1];
+                self.colorLable.text = arr1.lastObject;
+                
+            
         }
         if (i == 2) {
-            NSString *string1 = arr[i];
+           
+            
+            NSString *string1 = arr1[2];
             NSArray * arr1 = [string1 componentsSeparatedByString:@","];
-            self.productTimeLable.text = arr1[1];
+            self.productTimeLable.text = arr1.lastObject;
         }
         
     }
-    if (self.oldLable.text != nil) {
-        self.oldLable.layer.cornerRadius = 4;
-        self.oldLable.layer.masksToBounds = YES;
-        self.oldLable.layer.borderColor = YHRGBColor(25, 148, 252).CGColor;
-        self.oldLable.layer.borderWidth = 1;
-    }
-    else{
+    
         
-        self.oldLable.hidden = YES;
-    }
     
-    if (self.colorLable.text != nil) {
-        self.colorLable.layer.cornerRadius = 4;
-        self.colorLable.layer.masksToBounds = YES;
-        self.colorLable.layer.borderColor = YHRGBColor(25, 148, 252).CGColor;
-        self.colorLable.layer.borderWidth = 1;
-    }
-    else{
-        self.colorLable.hidden = YES;
-    }
-   
-    if ((self.productTimeLable.text != nil)) {
-        self.productTimeLable.layer.cornerRadius = 4;
-        self.productTimeLable.layer.masksToBounds = YES;
-        self.productTimeLable.layer.borderColor = YHRGBColor(25, 148, 252).CGColor;
-        self.productTimeLable.layer.borderWidth = 1;
-    }
     
-    else{
-        self.productTimeLable.hidden = YES;
-    }
+ 
    
     
 //    NSString *address = [NSString stringWithFormat:@"地址：%@", _cellData.Address];
-       NSString *address = [NSString stringWithFormat:@"地址：%@", @"石景山区苹果园一号院"];
+       NSString *address = [NSString stringWithFormat:@"地址：%@", _cellData.Address];
     self.addressLable.text = address;
 //    NSString *price = [NSString stringWithFormat:@"%@元/天",_cellData.GoodsUsePrice];
-    NSString *price = [NSString stringWithFormat:@"%@元/天",@"2"];
+    NSString *price = [NSString stringWithFormat:@"%@元/天",_cellData.GoodsUsePrice];
     self.daypriceLable.text = price;
     
     

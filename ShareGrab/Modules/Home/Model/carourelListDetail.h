@@ -9,5 +9,14 @@
 #import <Foundation/Foundation.h>
 
 @interface carourelListDetail : NSObject
+/*
+ **图片名字
+ */
 
+@property(nonatomic,copy) NSString *  CarouselName;
+/*
+ **图片url
+ */
+
+@property(nonatomic,copy) NSString *  PicFileID;
 @end

@@ -32,8 +32,8 @@
 
         
         NSString *sting = ((HomeListDetail*)_midViewDatas[i]).MenuClassLogoFileID;
-        NSString *testPic = @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514198569179&di=db1c036a9ccc7126ec371317880ea520&imgtype=0&src=http%3A%2F%2Fg.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Ffcfaaf51f3deb48fda05a714f91f3a292cf5788f.jpg";
-        [Btn sd_setBackgroundImageWithURL:[NSURL URLWithString:testPic] forState:(UIControlState)normal placeholderImage:nil];
+       
+        [Btn sd_setBackgroundImageWithURL:[NSURL URLWithString:sting] forState:(UIControlState)normal placeholderImage:nil];
         NSString *tittle = [((HomeListDetail*)_midViewDatas[i]).MenuClassName copy];
         Btn.MenuClassType = [((HomeListDetail*)_midViewDatas[i]).MenuClassType copy];
         Btn.MenuClassLogoFileID = [((HomeListDetail*)_midViewDatas[i]).MenuClassLogoFileID copy];

@@ -34,5 +34,5 @@
 @property(nonatomic,copy) NSString *  GoodsDeposit;
 @property(nonatomic,copy) NSString *  GoodsTypeID;
 @property(nonatomic,copy) NSString *  Address;
-@property(nonatomic,strong)NSString * LabelContent;
+@property(nonatomic,copy)NSString * LabelContent;
 @end

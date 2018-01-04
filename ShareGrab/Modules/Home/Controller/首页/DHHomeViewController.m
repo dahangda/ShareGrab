@@ -16,6 +16,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "HomeListDetail.h"
 #import "GoodListDetail.h"
+#import "carourelListDetail.h"
 #define  YHHeaderHeight   (260*Iphone6ScaleWidth+YHStatusBarHeight)
 #define  HeadScroViewH    (YHScreen_H - YHTabBarHeight)*0.23
 #define  midViewH         (YHScreen_H - YHTabBarHeight)*0.18
@@ -70,7 +71,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
 #pragma mark ********************导航栏背景图片
     
     [self.navigationController.navigationBar setBackgroundImage:
@@ -98,7 +98,7 @@
     titleLabel.textAlignment = UITextAlignmentCenter;
                                                                 ;
     titleLabel.textColor = YHRGBColor(255, 255, 255);                                                      ;
-    titleLabel.font  = [UIFont systemFontOfSize:14]                                           ;
+    titleLabel.font  = [UIFont systemFontOfSize:14];
    
     
     UIView *line = [[UIView alloc]initWithFrame:CGRectMake(0, 25, 250, 1)];
@@ -135,7 +135,7 @@
 
 #pragma mark ********************网络加载数据在主线程刷新
 
--(void) getRequset
+- (void) getRequset
 
 {
     
@@ -153,24 +153,28 @@
          
             
             NSLog(@"%@",responseBody);
-            self.headDatainfo = [NSMutableArray new];
-            NSLog(@"%@",responseBody[@"Notice"]);
-    
+            NSMutableArray *headDataArryInfo = [NSMutableArray array];
+            for (NSInteger i = 0;i < self.headData.count ; i++) {
+                carourelListDetail * caroureListDT =  [carourelListDetail mj_objectWithKeyValues:self.headData[i] ];
+                [headDataArryInfo addObject:caroureListDT.PicFileID];
+              
+            }
             
+    
 
             NSMutableArray *picUrls = [NSMutableArray new];
-            for (NSInteger i = 0; i < self.headDatainfo.count; i ++ ) {
-                [picUrls addObject: [NSURL URLWithString: self.headDatainfo[i]]];
+            for (NSInteger i = 0; i < self.headData.count; i ++ ) {
+                [picUrls addObject: [NSURL URLWithString: headDataArryInfo[i]]];
             }
             
             
-//            self.headView.imageURLStringsGroup = picUrls;
-            NSString *string = @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514183463576&di=c7d57d7604583966b364cb247b9cee82&imgtype=0&src=http%3A%2F%2Fh.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F95eef01f3a292df57fe17706b6315c6034a87387.jpg";
-            self.headView.imageURLStringsGroup = @[string,string,string];
+           self.headView.imageURLStringsGroup = picUrls;
+         
             
             self.headView.titlesGroup = nil;
             self.headView.currentPageDotColor = [UIColor whiteColor]; // 自定义分页控件小圆标颜色
             self.headView.backgroundColor = [UIColor blueColor];
+            
 #pragma mark ********************midView数据
 
                self.midData  = responseBody[@"HomeList"];
@@ -189,7 +193,7 @@
                 [GoodsListDTs addObject:GoodsListDT];
                 
             }
-            
+            self.dataSourceinfo = GoodsListDTs;
 
             dispatch_async(dispatch_get_main_queue(), ^{
                 
@@ -285,7 +289,7 @@
 #pragma mark ————— tableview 代理 —————
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
    
-  return  self.dataSource.count;
+  return  self.dataSourceinfo.count;
 }
 
 
@@ -296,7 +300,7 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     MineTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MineTableViewCell" forIndexPath:indexPath];
-    cell.cellData = _dataSource[indexPath.row];
+    cell.cellData = _dataSourceinfo[indexPath.row];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
